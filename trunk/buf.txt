@@ -1,3 +1,5 @@
+ÅÙÅ ÒÅÑÒÎÂÛÅ ÈÇÌÅÍÅÍÈß, ÏÐÎÂÅÐßÅÌ ×ÅÊÀÓÒ!
+
 --delete from section where id > 2
 --delete from entity where id > 10
 --delete from attribute
