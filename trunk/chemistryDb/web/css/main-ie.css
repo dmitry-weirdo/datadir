@@ -1,0 +1,9 @@
+#all { width: expression(document.getElementById("ruler").clientWidth < 600? "600px": "100%"); }
+
+#shade {
+	position: absolute;
+	width: expression(document.getElementById("all").clientWidth);
+	height: expression(Math.max(document.documentElement.clientHeight, document.getElementById("all").clientHeight));
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost:8080/chemistryWeb/img/shade.png', sizingMethod='scale');
+}
