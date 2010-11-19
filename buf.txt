@@ -40,5 +40,5 @@ CREATE TABLE `test_table` (
   CONSTRAINT `test_table_fk` FOREIGN KEY (`enum_value`) REFERENCES `enum` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=cp1251;
 
-
+что-нибудь
 insert into `test_table` (float_value, int_value, bool_value, string_value, enum_value) values(10.34, 666, true, 'some string', 12);
