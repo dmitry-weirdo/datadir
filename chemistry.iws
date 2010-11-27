@@ -81,76 +81,13 @@
     <favorites_list name="chemistry" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5331551">
+    <splitter split-orientation="horizontal" split-proportion="0.6276943">
       <split-first>
         <leaf>
-          <file leaf-file-name="GeneratorServiceTest.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/GeneratorServiceTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="297" column="0" selection-start="7004" selection-end="9683" vertical-scroll-proportion="0.031716418">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="GeneratorServiceImpl.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/GeneratorServiceImpl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="218" column="33" selection-start="7261" selection-end="7261" vertical-scroll-proportion="0.031716418">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AttributeCreateServlet.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/web/sections/AttributeCreateServlet.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="91" column="76" selection-start="3565" selection-end="3565" vertical-scroll-proportion="0.79850745">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="sectionEdit.jsp" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/chemistryDb/web/constructor/sectionEdit.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="62" column="28" selection-start="2172" selection-end="2172" vertical-scroll-proportion="0.9553398">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="context.xml" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/chemistryDb/web/META-INF/context.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="81" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SqlConnector.java" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="SqlConnector.java" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/sql/SqlConnector.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="50" column="33" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.031716418">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="DataSource.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="jar://C:/Program Files/Java/jdk1.6.0_17/src.zip!/javax/sql/DataSource.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="55" column="7" selection-start="2454" selection-end="2454" vertical-scroll-proportion="0.50932837">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="createTables.sql" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/chemistryDb/sql/createTables.sql">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="34" column="13" selection-start="1076" selection-end="1076" vertical-scroll-proportion="1.0783582">
+                <state line="222" column="0" selection-start="5747" selection-end="5747" vertical-scroll-proportion="0.8068182">
                   <folding />
                 </state>
               </provider>
@@ -163,7 +100,7 @@
           <file leaf-file-name="EntityTableDeleteServlet.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/web/generator/EntityTableDeleteServlet.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="45" column="34" selection-start="1581" selection-end="1581" vertical-scroll-proportion="1.1100746">
+                <state line="45" column="34" selection-start="1581" selection-end="1581" vertical-scroll-proportion="0.6902552">
                   <folding />
                 </state>
               </provider>
@@ -172,7 +109,7 @@
           <file leaf-file-name="EnumValue.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/entities/EnumValue.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="8" column="13" selection-start="162" selection-end="162" vertical-scroll-proportion="0.25373134">
+                <state line="8" column="13" selection-start="162" selection-end="162" vertical-scroll-proportion="0.15507412">
                   <folding />
                 </state>
               </provider>
@@ -181,16 +118,16 @@
           <file leaf-file-name="ConstructorServiceImpl.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/ConstructorServiceImpl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="332" column="45" selection-start="9921" selection-end="9921" vertical-scroll-proportion="0.3432836">
+                <state line="332" column="45" selection-start="9921" selection-end="9921" vertical-scroll-proportion="0.019721577">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Attribute.java" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="Attribute.java" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/entities/Attribute.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="79" column="55" selection-start="1679" selection-end="1679" vertical-scroll-proportion="0.33208954">
+                <state line="79" column="55" selection-start="1679" selection-end="1679" vertical-scroll-proportion="0.5533643">
                   <folding />
                 </state>
               </provider>
@@ -199,7 +136,7 @@
           <file leaf-file-name="entityEdit.jsp" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/chemistryDb/web/constructor/entityEdit.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="96" column="58" selection-start="2466" selection-end="2466" vertical-scroll-proportion="0.033009708">
+                <state line="96" column="58" selection-start="2466" selection-end="2466" vertical-scroll-proportion="0.02021403">
                   <folding />
                 </state>
               </provider>
@@ -207,17 +144,17 @@
           </file>
           <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/chemistryDb/web/WEB-INF/web.xml">
-              <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+              <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
                 <state />
               </provider>
-              <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+              <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
                 <state />
               </provider>
               <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
                 <state />
               </provider>
               <provider selected="true" editor-type-id="text-editor">
-                <state line="65" column="74" selection-start="2423" selection-end="2423" vertical-scroll-proportion="0.03469388">
+                <state line="65" column="74" selection-start="2423" selection-end="2423" vertical-scroll-proportion="0.020833334">
                   <folding />
                 </state>
               </provider>
@@ -226,7 +163,7 @@
           <file leaf-file-name="todo.txt" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/todo.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="28" column="5" selection-start="1684" selection-end="1684" vertical-scroll-proportion="0.8880597">
+                <state line="28" column="5" selection-start="1684" selection-end="1684" vertical-scroll-proportion="0.5522042">
                   <folding />
                 </state>
               </provider>
@@ -235,7 +172,7 @@
           <file leaf-file-name="EntityTableCreateServlet.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/web/generator/EntityTableCreateServlet.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="45" column="0" selection-start="580" selection-end="1528" vertical-scroll-proportion="1.1100746">
+                <state line="45" column="0" selection-start="580" selection-end="1528" vertical-scroll-proportion="0.6902552">
                   <folding />
                 </state>
               </provider>
@@ -299,188 +236,6 @@
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
         </PATH_ELEMENT>
       </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="chemistry" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="chemistryDb" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="chemistry" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="chemistryDb" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb\web" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="chemistry" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="chemistryDb" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb\web" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb\web\generator" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="chemistry" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="chemistryDb" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb\web" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb\web\constructor" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="chemistry" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="chemistryDb" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb\src\ru" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb\src\ru\pda" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb\src\ru\pda\chemistry" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb\src\ru\pda\chemistry\web" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb\src\ru\pda\chemistry\web\sections" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="chemistry" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="chemistryDb" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb\src\ru" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb\src\ru\pda" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb\src\ru\pda\chemistry" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb\src\ru\pda\chemistry\web" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb\src\ru\pda\chemistry\web\generator" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="chemistry" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="chemistryDb" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb\src\ru" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb\src\ru\pda" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:D:\java\chemistry\chemistryDb\src\ru\pda\chemistry" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
     </subPane>
   </component>
   <component name="ProjectReloadState">
@@ -522,31 +277,7 @@
       <recent name="ru.pda.chemistry.web.sections" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GeneratorServiceTest">
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-    </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote">
-      <option name="WORKING_DIRECTORY" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="8080" />
-      <option name="LOCAL" value="false" />
-      <option name="OPEN_IN_BROWSER" value="true" />
-      <option name="OPEN_IN_BROWSER_URL" value="/" />
-      <option name="COMMON_VM_ARGUMENTS" value="" />
-      <option name="DEPLOY_TOMCAT_MANAGER" value="false" />
-      <option name="BASE_DIRECTORY_NAME" value="" />
-      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
-    </configuration>
+  <component name="RunManager" selected="Application.ConnectionTest">
     <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -568,6 +299,30 @@
       <method>
         <option name="Make" value="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote">
+      <option name="WORKING_DIRECTORY" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="8080" />
+      <option name="LOCAL" value="false" />
+      <option name="OPEN_IN_BROWSER" value="true" />
+      <option name="OPEN_IN_BROWSER_URL" value="/" />
+      <option name="COMMON_VM_ARGUMENTS" value="" />
+      <option name="DEPLOY_TOMCAT_MANAGER" value="false" />
+      <option name="BASE_DIRECTORY_NAME" value="" />
+      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -807,7 +562,7 @@
       <window_info id="SQL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6569893" order="14" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="6" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24933262" order="1" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.325054" order="1" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.325054" order="1" />
       <window_info id="Color Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994652" order="3" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39892474" order="3" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="12" />
@@ -819,12 +574,12 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="0" />
       <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="4" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="5" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43903744" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17754011" order="0" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="10" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973261" order="2" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="6" />
       <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="11" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3236559" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32289416" order="2" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="5" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="0" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
@@ -890,30 +645,109 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/GeneratorServiceTest.java">
+    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/GeneratorServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="297" column="0" selection-start="7004" selection-end="9683" vertical-scroll-proportion="0.031716418">
+        <state line="218" column="33" selection-start="7261" selection-end="7261" vertical-scroll-proportion="0.03057554">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/GeneratorServiceImpl.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.6.0_17/src.zip!/javax/sql/DataSource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="218" column="33" selection-start="7261" selection-end="7261" vertical-scroll-proportion="0.031716418">
+        <state line="55" column="7" selection-start="2454" selection-end="2454" vertical-scroll-proportion="0.47810858">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chemistryDb/sql/createTables.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="13" selection-start="1076" selection-end="1076" vertical-scroll-proportion="1.0122592">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/web/generator/EntityTableDeleteServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="34" selection-start="1581" selection-end="1581" vertical-scroll-proportion="0.6902552">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/entities/EnumValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="162" selection-end="162" vertical-scroll-proportion="0.15507412">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/ConstructorServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="332" column="45" selection-start="9921" selection-end="9921" vertical-scroll-proportion="0.019721577">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chemistryDb/web/constructor/entityEdit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="58" selection-start="2466" selection-end="2466" vertical-scroll-proportion="0.02021403">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chemistryDb/web/WEB-INF/web.xml">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="74" selection-start="2423" selection-end="2423" vertical-scroll-proportion="0.020833334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="5" selection-start="1684" selection-end="1684" vertical-scroll-proportion="0.5522042">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/web/generator/EntityTableCreateServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="0" selection-start="580" selection-end="1528" vertical-scroll-proportion="0.6902552">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/entities/Attribute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="55" selection-start="1679" selection-end="1679" vertical-scroll-proportion="0.5533643">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/ConstructorServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="142" column="62" selection-start="4138" selection-end="4138" vertical-scroll-proportion="-0.29814386">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/web/sections/AttributeCreateServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="76" selection-start="3565" selection-end="3565" vertical-scroll-proportion="0.79850745">
+        <state line="91" column="76" selection-start="3565" selection-end="3565" vertical-scroll-proportion="0.76978415">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chemistryDb/web/constructor/sectionEdit.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="28" selection-start="2172" selection-end="2172" vertical-scroll-proportion="0.9553398">
+        <state line="62" column="28" selection-start="2172" selection-end="2172" vertical-scroll-proportion="0.58501786">
           <folding />
         </state>
       </provider>
@@ -925,88 +759,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.6.0_17/src.zip!/javax/sql/DataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="7" selection-start="2454" selection-end="2454" vertical-scroll-proportion="0.50932837">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chemistryDb/sql/createTables.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="13" selection-start="1076" selection-end="1076" vertical-scroll-proportion="1.0783582">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/sql/SqlConnector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="33" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.031716418">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chemistryDb/web/constructor/entityEdit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="58" selection-start="2466" selection-end="2466" vertical-scroll-proportion="0.033009708">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chemistryDb/web/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="74" selection-start="2423" selection-end="2423" vertical-scroll-proportion="0.03469388">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/todo.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="5" selection-start="1684" selection-end="1684" vertical-scroll-proportion="0.8880597">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/web/generator/EntityTableCreateServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="580" selection-end="1528" vertical-scroll-proportion="1.1100746">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/web/generator/EntityTableDeleteServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="34" selection-start="1581" selection-end="1581" vertical-scroll-proportion="1.1100746">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/entities/EnumValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="162" selection-end="162" vertical-scroll-proportion="0.25373134">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/ConstructorServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="332" column="45" selection-start="9921" selection-end="9921" vertical-scroll-proportion="0.3432836">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/entities/Attribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="55" selection-start="1679" selection-end="1679" vertical-scroll-proportion="0.33208954">
+        <state line="222" column="0" selection-start="5747" selection-end="5747" vertical-scroll-proportion="0.8068182">
           <folding />
         </state>
       </provider>
