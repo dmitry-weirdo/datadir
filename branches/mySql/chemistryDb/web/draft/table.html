@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <title>Test page</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link rel="stylesheet" type="text/css" href="../css/main.css"/>
+	<script type="text/javascript" src="../js/popup.js"></script>
+	<!--[if IE 6]>
+	<link rel="stylesheet" type="text/css" href="../css/main-ie.css"/>
+	<![endif]-->
+</head>
+<body>
+<div id="ruler"></div>
+<div id="all">
+	<div id="content">
+		<h4>Разделы химии</h4>
+		<table cellpadding="0" cellspacing="0">
+			<tr>
+				<td class="title">Физико-химический анализ</td>
+				<td class="button"><a href="#"><span class="save">&nbsp;</span></a></td>
+				<td class="button"><a href="#"><span class="edit">&nbsp;</span></a></td>
+				<td class="button" ><a href="#"><span class="delete">&nbsp;</span></a></td>
+			</tr>
+			<tr>
+				<td class="title">Коллоидная химия</td>
+				<td class="button"><a href="#"><span class="save">&nbsp;</span></a></td>
+				<td class="button"><a href="#"><span class="edit">&nbsp;</span></a></td>
+				<td class="button" ><a href="#"><span class="delete">&nbsp;</span></a></td>
+			</tr>
+			<tr>
+				<td class="title">Термохимия</td>
+				<td class="button"><a href="#"><span class="save">&nbsp;</span></a></td>
+				<td class="button"><a href="#"><span class="edit">&nbsp;</span></a></td>
+				<td class="button" ><a href="#"><span class="delete">&nbsp;</span></a></td>
+			</tr>
+			<tr>
+				<td class="title">&nbsp;</td>
+				<td class="button"><a href="#" class="add"><span class="add">&nbsp;</span></a></td>
+				<td class="button">&nbsp;</td>
+				<td class="button" >&nbsp;</td>
+			</tr>
+		</table>
+		<a href="#" type="button" onclick="showForm('hiddenForm')">Press to show hidden form</a>
+	</div>
+</div>
+
+<div id="hiddenForm" class="frm" style="border: 1px solid black;">
+	<div class="msg">
+		<div class="warn">При удалении раздела будут удалены все справочники внутри раздела!</div>
+		<div class="confirm">Вы действительно хотите удалить раздел?</div>
+		<div class="buttons">
+			<input type="button" onclick="hideForm('hiddenForm')" value="Да"/>&nbsp;
+			<input type="button" onclick="hideForm('hiddenForm')" value="Нет"/>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+           version="2.5">
+	<servlet>
+		<servlet-name>sectionsList</servlet-name>
+		<servlet-class>ru.pda.chemistry.web.sections.SectionsListServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>sectionCreate</servlet-name>
+		<servlet-class>ru.pda.chemistry.web.sections.SectionCreateServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>sectionEdit</servlet-name>
+		<servlet-class>ru.pda.chemistry.web.sections.SectionEditServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>sectionDelete</servlet-name>
+		<servlet-class>ru.pda.chemistry.web.sections.SectionDeleteServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>entityCreate</servlet-name>
+		<servlet-class>ru.pda.chemistry.web.sections.EntityCreateServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>entityEdit</servlet-name>
+		<servlet-class>ru.pda.chemistry.web.sections.EntityEditServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>entityDelete</servlet-name>
+		<servlet-class>ru.pda.chemistry.web.sections.EntityDeleteServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>attributeCreate</servlet-name>
+		<servlet-class>ru.pda.chemistry.web.sections.AttributeCreateServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>attributeEdit</servlet-name>
+		<servlet-class>ru.pda.chemistry.web.sections.AttributeEditServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>attributeDelete</servlet-name>
+		<servlet-class>ru.pda.chemistry.web.sections.AttributeDeleteServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>enumValueCreate</servlet-name>
+		<servlet-class>ru.pda.chemistry.web.sections.EnumValueCreateServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>enumValueDelete</servlet-name>
+		<servlet-class>ru.pda.chemistry.web.sections.EnumValueDeleteServlet</servlet-class>
+	</servlet>
+
+
+	<servlet>
+		<servlet-name>entityTableCreate</servlet-name>
+		<servlet-class>ru.pda.chemistry.web.generator.EntityTableCreateServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>entityTableDelete</servlet-name>
+		<servlet-class>ru.pda.chemistry.web.generator.EntityTableDeleteServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>entityValuesEdit</servlet-name>
+		<servlet-class>ru.pda.chemistry.web.generator.EntityValuesEditServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>entityValueCreate</servlet-name>
+		<servlet-class>ru.pda.chemistry.web.generator.EntityValueCreateServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>entityValueEdit</servlet-name>
+		<servlet-class>ru.pda.chemistry.web.generator.EntityValueEditServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>entityValueDelete</servlet-name>
+		<servlet-class>ru.pda.chemistry.web.generator.EntityValueDeleteServlet</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>sectionsList</servlet-name>
+		<url-pattern>/sectionsList</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>sectionCreate</servlet-name>
+		<url-pattern>/sectionCreate</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>sectionEdit</servlet-name>
+		<url-pattern>/sectionEdit</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>sectionDelete</servlet-name>
+		<url-pattern>/sectionDelete</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>entityCreate</servlet-name>
+		<url-pattern>/entityCreate</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>entityEdit</servlet-name>
+		<url-pattern>/entityEdit</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>entityDelete</servlet-name>
+		<url-pattern>/entityDelete</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>attributeCreate</servlet-name>
+		<url-pattern>/attributeCreate</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>attributeEdit</servlet-name>
+		<url-pattern>/attributeEdit</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>attributeDelete</servlet-name>
+		<url-pattern>/attributeDelete</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>enumValueCreate</servlet-name>
+		<url-pattern>/enumValueCreate</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>enumValueDelete</servlet-name>
+		<url-pattern>/enumValueDelete</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>entityTableCreate</servlet-name>
+		<url-pattern>/entityTableCreate</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>entityTableDelete</servlet-name>
+		<url-pattern>/entityTableDelete</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>entityValuesEdit</servlet-name>
+		<url-pattern>/entityValuesEdit</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>entityValueCreate</servlet-name>
+		<url-pattern>/entityValueCreate</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>entityValueEdit</servlet-name>
+		<url-pattern>/entityValueEdit</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>entityValueDelete</servlet-name>
+		<url-pattern>/entityValueDelete</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>
