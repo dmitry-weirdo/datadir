@@ -1,43 +1,53 @@
-drop table enum;
-drop table attribute;
-drop table entity;
-drop table section;
+create table Section
+(
+    id        integer not null,
+    name      varchar(255) not null,
 
-CREATE TABLE `section` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=cp1251;
+    primary key(id),
+    unique(name)
+);
+create generator section_gen;
+set generator section_gen to 0;
 
-CREATE TABLE `entity` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
-  `section_id` int(11) NOT NULL,
-  `table_name` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `name` (`name`),
-  KEY `section_id` (`section_id`),
-  CONSTRAINT `entity_fk` FOREIGN KEY (`section_id`) REFERENCES `section` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=cp1251;
+create table Entity
+(
+    id        integer not null,
+    name      varchar(255) not null,
+    section_id integer not null,
+    table_name varchar(255),
 
-CREATE TABLE `attribute` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
-  `type` smallint(6) NOT NULL,
-  `measure_unit` varchar(255) DEFAULT NULL,
-  `entity_id` int(11) DEFAULT NULL,
-  `column_name` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `entity_id` (`entity_id`),
-  CONSTRAINT `attribute_fk` FOREIGN KEY (`entity_id`) REFERENCES `entity` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=cp1251;
+    primary key(id),
+    unique(name),
+    foreign key(section_id) references Section(id)
+);
+create generator entity_gen;
+set generator entity_gen to 0;
 
-CREATE TABLE `enum` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
-  `attribute_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `attribute_id` (`attribute_id`),
-  CONSTRAINT `enum_fk` FOREIGN KEY (`attribute_id`) REFERENCES `attribute` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=cp1251;
+create table Attribute
+(
+    id        integer not null,
+    name      varchar(255) not null,
+    type      smallint not null,
+    measure_unit varchar(255),
+    entity_id integer, -- todo: why null ?
+    column_name varchar(255),
+
+    primary key(id),
+    foreign key(entity_id) references Entity(id)
+);
+create generator attribute_gen;
+set generator attribute_gen to 0;
+
+create table Enum
+(
+    id        integer not null,
+    name      varchar(255) not null,
+    attribute_id integer not null,
+
+    primary key(id),
+    foreign key(attribute_id) references Attribute(id)
+);
+create generator enum_gen;
+set generator enum_gen to 0;
+
+commit;
