@@ -35,14 +35,14 @@
             <attribute name="URI" value="&lt;N/A&gt;" />
           </containerElement>
           <containerElement type="library" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/firebirdsql-full.jar" />
+            <url>jar://$MODULE_DIR$/lib/firebirdsql-full.jar!/</url>
+          </containerElement>
+          <containerElement type="library" level="module">
             <attribute name="method" value="0" />
             <attribute name="URI" value="&lt;N/A&gt;" />
             <url>jar://$APPLICATION_HOME_DIR$/lib/j2ee.jar!/</url>
-          </containerElement>
-          <containerElement type="library" level="module">
-            <attribute name="method" value="1" />
-            <attribute name="URI" value="/WEB-INF/lib/jaybird-2.1.6.jar" />
-            <url>jar://$MODULE_DIR$/lib/jaybird-2.1.6.jar!/</url>
           </containerElement>
           <containerElement type="library" level="module">
             <attribute name="method" value="0" />
@@ -53,6 +53,11 @@
             <attribute name="method" value="1" />
             <attribute name="URI" value="/WEB-INF/lib/log4j.jar" />
             <url>jar://$MODULE_DIR$/lib/log4j.jar!/</url>
+          </containerElement>
+          <containerElement type="library" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/jaybird-2.1.6.jar" />
+            <url>jar://$MODULE_DIR$/lib/jaybird-2.1.6.jar!/</url>
           </containerElement>
           <containerElement type="library" level="module">
             <attribute name="method" value="1" />
