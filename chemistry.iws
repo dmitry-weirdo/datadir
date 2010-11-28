@@ -97,21 +97,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GeneratorServiceImpl.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GeneratorServiceImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/GeneratorServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="0" selection-start="1853" selection-end="1853" vertical-scroll-proportion="0.9602339">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="35" column="28" selection-start="1283" selection-end="1283" vertical-scroll-proportion="0.019318182">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GeneratorServiceTest.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GeneratorServiceTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/GeneratorServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="659" column="0" selection-start="25377" selection-end="25377" vertical-scroll-proportion="0.750838">
+            <state line="675" column="70" selection-start="25986" selection-end="25986" vertical-scroll-proportion="0.51284915">
               <folding />
             </state>
           </provider>
@@ -417,6 +415,18 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.GeneratorServiceTest">
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote">
+      <option name="WORKING_DIRECTORY" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="8080" />
+      <option name="LOCAL" value="false" />
+      <option name="OPEN_IN_BROWSER" value="true" />
+      <option name="OPEN_IN_BROWSER_URL" value="/" />
+      <option name="COMMON_VM_ARGUMENTS" value="" />
+      <option name="DEPLOY_TOMCAT_MANAGER" value="false" />
+      <option name="BASE_DIRECTORY_NAME" value="" />
+      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
@@ -445,6 +455,13 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
     </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -466,25 +483,6 @@
       <method>
         <option name="Make" value="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote">
-      <option name="WORKING_DIRECTORY" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="8080" />
-      <option name="LOCAL" value="false" />
-      <option name="OPEN_IN_BROWSER" value="true" />
-      <option name="OPEN_IN_BROWSER_URL" value="/" />
-      <option name="COMMON_VM_ARGUMENTS" value="" />
-      <option name="DEPLOY_TOMCAT_MANAGER" value="false" />
-      <option name="BASE_DIRECTORY_NAME" value="" />
-      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
     </configuration>
     <configuration default="false" name="ConnectionTest" type="Application" factoryName="Application" enabled="false" merge="false">
       <option name="MAIN_CLASS_NAME" value="ru.pda.chemistry.sql.ConnectionTest" />
@@ -888,19 +886,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/GeneratorServiceTest.java">
+    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/GeneratorServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="659" column="0" selection-start="25377" selection-end="25377" vertical-scroll-proportion="0.750838">
+        <state line="35" column="28" selection-start="1283" selection-end="1283" vertical-scroll-proportion="0.019318182">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/GeneratorServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/GeneratorServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="0" selection-start="1853" selection-end="1853" vertical-scroll-proportion="0.9602339">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="675" column="70" selection-start="25986" selection-end="25986" vertical-scroll-proportion="0.51284915">
+          <folding />
         </state>
       </provider>
     </entry>
