@@ -80,15 +80,13 @@ public class ConstructorServiceImpl implements ConstructorService
 
 		try
 		{
-			resultSet = connector.getResultSet(getConcatenation(sb, "select id from section where name = \"", section.getName(), "\""));
+			resultSet = connector.getResultSet(getConcatenation(sb, "select id from section where name = '", section.getName(), "'"));
 			if (resultSet.next())
 				throw new NotUniqueException(getConcatenation(sb, "Section with name \"", section.getName(), "\" already exists"));
 
-			connector.closeResultSet(resultSet);
+			connector.executeUpdate(getConcatenation(sb, "insert into section(id, name) values (gen_id(section_gen, 1), '", section.getName(), "')"));
 
-			connector.executeUpdate(getConcatenation(sb, "insert into section(name) values (\"", section.getName(), "\")"));
-
-			resultSet = connector.getResultSetNext(getConcatenation(sb, "select id from section where name = \"", section.getName(), "\""));
+			resultSet = connector.getResultSetNext(getConcatenation(sb, "select id from section where name = '", section.getName(), "'"));
 			return resultSet.getInt(1);
 		}
 		finally
@@ -193,19 +191,18 @@ public class ConstructorServiceImpl implements ConstructorService
 		try
 		{
 			// todo: think about name uniquness only within section (name + section_id) -> then database unique constraint will have to be change appropriately 
-			resultSet = connector.getResultSet(getConcatenation(sb, "select id from entity where name = \"", entity.getName(), "\""));
+			resultSet = connector.getResultSet(getConcatenation(sb, "select id from entity where name = '", entity.getName(), "'"));
 			if (resultSet.next())
 				throw new NotUniqueException(getConcatenation(sb, "Entity with name \"", entity.getName(), "\" already exists"));
 
-			connector.closeResultSet(resultSet);
-
-			connector.executeUpdate(getConcatenation(sb, "insert into entity(name, section_id) values (",
-				"\"", entity.getName(), "\", ", // name
+			connector.executeUpdate(getConcatenation(sb, "insert into entity(id, name, section_id) values (",
+				"gen_id(entity_gen, 1) ,", // id
+				"'", entity.getName(), "', ", // name
 				sectionId.toString(), // section_id 
 				")"
 			));
 
-			resultSet = connector.getResultSetNext(getConcatenation(sb, "select id from entity where name = \"", entity.getName(), "\" and section_id = ", sectionId.toString()));
+			resultSet = connector.getResultSetNext(getConcatenation(sb, "select id from entity where name = '", entity.getName(), "' and section_id = ", sectionId.toString()));
 			return resultSet.getInt(1);
 		}
 		finally
@@ -322,21 +319,20 @@ public class ConstructorServiceImpl implements ConstructorService
 		try
 		{
 			// check name uniqueness of the attribute within the entity
-			resultSet = connector.getResultSet(getConcatenation(sb, "select id from attribute where name = \"", attribute.getName(), "\" and entity_id = ", entityId.toString()));
+			resultSet = connector.getResultSet(getConcatenation(sb, "select id from attribute where name = '", attribute.getName(), "' and entity_id = ", entityId.toString()));
 			if (resultSet.next())
 				throw new NotUniqueException(getConcatenation(sb, "Attribute with name \"", attribute.getName(), "\" for entity with id = ", entityId.toString()," already exists"));
 
-			connector.closeResultSet(resultSet);
-
-			connector.executeUpdate(getConcatenation(sb, "insert into attribute(name, type, measure_unit, entity_id) values (",
-				"\"", attribute.getName(), "\", ", // name
+			connector.executeUpdate(getConcatenation(sb, "insert into attribute(id, name, type, measure_unit, entity_id) values (",
+				"gen_id(attribute_gen, 1), ", // id
+				"'", attribute.getName(), "', ", // name
 				Integer.toString(attribute.getType().ordinal()), ", ", // type
-				attribute.getMeasureUnit() == null ? "NULL": getConcatenation(sb, "\"", attribute.getMeasureUnit(), "\""), ", ", // measure_unit
+				attribute.getMeasureUnit() == null ? "NULL": getConcatenation(sb, "'", attribute.getMeasureUnit(), "'"), ", ", // measure_unit
 				entityId.toString(), // entity_id
 				")"
 			));
 
-			resultSet = connector.getResultSetNext(getConcatenation(sb, "select id from attribute where name = \"", attribute.getName(), "\" and entity_id = ", entityId.toString()));
+			resultSet = connector.getResultSetNext(getConcatenation(sb, "select id from attribute where name = '", attribute.getName(), "' and entity_id = ", entityId.toString()));
 			return resultSet.getInt(1);
 		}
 		finally
@@ -442,19 +438,18 @@ public class ConstructorServiceImpl implements ConstructorService
 		try
 		{
 			// check name uniqueness of the enumValue within the attribute
-			resultSet = connector.getResultSet(getConcatenation(sb, "select id from enum where name = \"", enumValue.getName(), "\" and attribute_id = ", attributeId.toString()));
+			resultSet = connector.getResultSet(getConcatenation(sb, "select id from enum where name = '", enumValue.getName(), "' and attribute_id = ", attributeId.toString()));
 			if (resultSet.next())
 				throw new NotUniqueException(getConcatenation(sb, "EnumValue with name \"", enumValue.getName(), "\" for attribute with id = ", attributeId.toString()," already exists"));
 
-			connector.closeResultSet(resultSet);
-
-			connector.executeUpdate(getConcatenation(sb, "insert into enum(name, attribute_id) values (",
-				"\"", enumValue.getName(), "\", ", // name
+			connector.executeUpdate(getConcatenation(sb, "insert into enum(id, name, attribute_id) values (",
+				"gen_id(enum_gen, 1), ", // id
+				"'", enumValue.getName(), "', ", // name
 				attributeId.toString(), // attribute_id
 				")"
 			));
 
-			resultSet = connector.getResultSetNext(getConcatenation(sb, "select id from enum where name = \"", enumValue.getName(), "\" and attribute_id = ", attributeId.toString()));
+			resultSet = connector.getResultSetNext(getConcatenation(sb, "select id from enum where name = '", enumValue.getName(), "' and attribute_id = ", attributeId.toString()));
 			return resultSet.getInt(1);
 		}
 		finally
