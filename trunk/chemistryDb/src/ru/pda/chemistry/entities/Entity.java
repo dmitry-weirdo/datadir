@@ -32,6 +32,12 @@ public class Entity
 	public void setTableName(String tableName) {
 		this.tableName = tableName;
 	}
+	public String getGeneratorName() {
+		return generatorName;
+	}
+	public void setGeneratorName(String generatorName) {
+		this.generatorName = generatorName;
+	}
 	public Section getSection() {
 		return section;
 	}
@@ -57,6 +63,7 @@ public class Entity
 	private Integer id;
 	private String name;
 	private String tableName;
+	private String generatorName;
 	private Section section;
 	private List<Attribute> attributes;
 }

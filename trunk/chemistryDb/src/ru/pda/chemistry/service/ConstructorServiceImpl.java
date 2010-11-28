@@ -161,7 +161,7 @@ public class ConstructorServiceImpl implements ConstructorService
 
 		try
 		{
-			resultSet = connector.getResultSet(getConcatenation(sb, "select id, name, table_name, section_id from entity where id = ", id.toString()));
+			resultSet = connector.getResultSet(getConcatenation(sb, "select id, name, table_name, generator_name, section_id from entity where id = ", id.toString()));
 			if (!resultSet.next())
 				return null;
 
@@ -169,7 +169,8 @@ public class ConstructorServiceImpl implements ConstructorService
 			entity.setId(resultSet.getInt(1));
 			entity.setName(resultSet.getString(2));
 			entity.setTableName(resultSet.getString(3));
-			entity.setSection(getSection(resultSet.getInt(4)));
+			entity.setGeneratorName(resultSet.getString(4));
+			entity.setSection(getSection(resultSet.getInt(5)));
 			// todo: fill attributes (may be on boolean method parameter)
 
 			return entity;

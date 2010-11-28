@@ -96,9 +96,10 @@ public class GeneratorServiceTest
 		service.generateTable(entity);
 
 
-		// check that table_name is not null
+		// check that table_name and generator_name is not null
 		entity = constructorService.getEntity(entityId);
 		assertNotNull("table name is null, not set after generateTable()", entity.getTableName());
+		assertNotNull("generator name is null, not set after generateTable()", entity.getGeneratorName());
 
 		// check that attribute names are not null
 		List<Attribute> attributes = constructorService.getAttributes(entityId);
@@ -128,6 +129,7 @@ public class GeneratorServiceTest
 		getConcatenation(sb,
 			"insert into ", entity.getTableName(),
 			"(",
+				"id, ",
 				"source, ",
 				booleanAttribute.getColumnName(), ", ",
 				doubleAttribute.getColumnName(), ", ",
@@ -137,8 +139,9 @@ public class GeneratorServiceTest
 			") ",
 			"values",
 			"(",
+				"gen_id(", entity.getGeneratorName(), ", 1), ", // id
 				"'some mega source'", ", ", // source
-				"true", ", ", // bool
+				"1", ", ", // bool
 				"123.33", ", ", // double
 				"8760", ", ", // int
 				"'some string value'", ", ", // string
@@ -151,6 +154,7 @@ public class GeneratorServiceTest
 		getConcatenation(sb,
 			"insert into ", entity.getTableName(),
 			"(",
+				"id, ",
 				"source, ",
 				booleanAttribute.getColumnName(), ", ",
 				doubleAttribute.getColumnName(), ", ",
@@ -160,8 +164,9 @@ public class GeneratorServiceTest
 			") ",
 			"values",
 			"(",
+				"gen_id(", entity.getGeneratorName(), ", 1), ", // id
 				"'super great source'", ", ", // source
-				"false", ", ", // bool
+				"0", ", ", // bool
 				"-345.51", ", ", // double
 				"-9623", ", ", // int
 				"'some other string value'", ", ", // string
@@ -177,6 +182,7 @@ public class GeneratorServiceTest
 			getConcatenation(sb,
 			"insert into ", entity.getTableName(),
 				"(",
+					"id, ",
 					"source, ",
 					booleanAttribute.getColumnName(), ", ",
 					doubleAttribute.getColumnName(), ", ",
@@ -186,8 +192,9 @@ public class GeneratorServiceTest
 				") ",
 				"values",
 				"(",
+					"gen_id(", entity.getGeneratorName(), ", 1), ", // id
 					"'super mega source'", ", ", // source
-					"false", ", ", // bool
+					"0", ", ", // bool
 					"-345.51", ", ", // double
 					"-9623", ", ", // int
 					"'some other string value'", ", ", // string
@@ -229,11 +236,12 @@ public class GeneratorServiceTest
 		entity = constructorService.getEntity(entityId); // for filling attributes and enum values
 		entity.setAttributes(constructorService.getAttributes(entityId));
 
-		// check that table_name is not null
+		// check that table_name and generator_name is not null
 		service.generateTable(entity);
 		entity = constructorService.getEntity(entityId);
 		String tableName = entity.getTableName(); // save for usage after deletion
 		assertNotNull("table name is null, not set after generateTable()", entity.getTableName());
+		assertNotNull("generator name is null, not set after generateTable()", entity.getGeneratorName());
 		assertFalse("entity is editable, although entity's table was generated", entity.isEditable());
 
 		// check that column names are set for each attribute of the entity
@@ -244,13 +252,15 @@ public class GeneratorServiceTest
 		getConcatenation(sb,
 			"insert into ", entity.getTableName(),
 			"(",
+				"id, ",
 				"source, ",
 				booleanAttribute.getColumnName(),
 			") ",
 			"values",
 			"(",
+				"gen_id(", entity.getGeneratorName(), ", 1), ", // id
 				"'some mega source'", ", ", // source
-				"true",// bool
+				"1",// bool
 			")"
 		);
 
@@ -260,26 +270,30 @@ public class GeneratorServiceTest
 		}
 		catch (SQLException e)
 		{
+			e.printStackTrace();
 			fail("insertion into created entity table failed");
 		}
 
-		// check that table_name is null
+		// check that table_name is null and generator_name is null
 		service.deleteTable(entity);
 		entity = constructorService.getEntity(entityId);
 		assertNull("table name is not null, not deleted after generateTable()", entity.getTableName());
+		assertNull("generator name is not null, not deleted after generateTable()", entity.getGeneratorName());
 		assertTrue("entity is not editable, although entity's table was dropped", entity.isEditable());
 
 		// try to insert into old entity table
 		getConcatenation(sb,
 			"insert into ", tableName,
 			"(",
+				"id, ",
 				"source, ",
 				booleanAttribute.getColumnName(),
 			") ",
 			"values",
 			"(",
+				"gen_id(", entity.getGeneratorName(), ", 1), ", // id
 				"'some mega source'", ", ", // source
-				"true",// bool
+				"1",// bool
 			")"
 		);
 
@@ -317,12 +331,13 @@ public class GeneratorServiceTest
 		entity = constructorService.getEntity(entityId); // for filling attributes and enum values
 		entity.setAttributes(constructorService.getAttributes(entityId));
 
-		// check that table_name is not null
+		// check that table_name is not null and generator name is not null
 		service.generateTable(entity);
 		entity = constructorService.getEntity(entityId);
 		entity.setAttributes(constructorService.getAttributes(entityId));
 
 		assertNotNull("table name is null, not set after generateTable()", entity.getTableName());
+		assertNotNull("generator name is null, not set after generateTable()", entity.getGeneratorName());
 		assertFalse("entity is editable, although entity's table was generated", entity.isEditable());
 
 		// check that column names are set for each attribute of the entity
@@ -641,11 +656,6 @@ public class GeneratorServiceTest
 		enumAttributeValue.setAttribute(enumAttribute);
 		enumAttributeValue.setValue(enumValueId1);
 		attributeValues.add(enumAttributeValue);
-
-		AttributeValue enumAttributeValue2 = new EnumAttributeValue();
-		enumAttributeValue2.setAttribute(enumAttribute);
-		enumAttributeValue2.setValue(enumValueId2);
-		attributeValues.add(enumAttributeValue2); // value 2 will be set because both used in one set method
 
 		service.setAttributeValues(entityValueId, attributeValues);
 

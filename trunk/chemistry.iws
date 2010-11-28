@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project relativePaths="false" version="4">
   <component name="BookmarkManager">
+    <editor_bookmark url="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/GeneratorServiceTest.java" line="293" number="1" />
     <editor_bookmark url="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/web/generator/EntityValueEditServlet.java" line="270" number="0" />
-    <editor_bookmark url="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/ConstructorServiceTest.java" line="824" number="1" />
     <editor_bookmark url="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/ConstructorServiceTest.java" line="1254" number="2" description="attributeEnumValues1 = service.getEnumValues(attri..." />
   </component>
   <component name="CCaseConfig">
@@ -38,6 +38,21 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/GeneratorServiceImpl.java" line="313" class="ru.pda.chemistry.service.GeneratorServiceImpl" package="ru.pda.chemistry.service">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -82,11 +97,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="createTables.sql" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chemistryDb/sql/createTables.sql">
+      <file leaf-file-name="GeneratorServiceImpl.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/GeneratorServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="17" selection-start="1098" selection-end="1106" vertical-scroll-proportion="0.83128494">
-              <folding />
+            <state line="58" column="0" selection-start="1853" selection-end="1853" vertical-scroll-proportion="0.9602339">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,25 +111,7 @@
       <file leaf-file-name="GeneratorServiceTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/GeneratorServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="781" column="7" selection-start="29741" selection-end="29748" vertical-scroll-proportion="0.96091956">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GeneratorServiceImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/GeneratorServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="66" selection-start="2464" selection-end="2464" vertical-scroll-proportion="0.40893856">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SqlConnector.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/sql/SqlConnector.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="226" column="1" selection-start="6066" selection-end="6066" vertical-scroll-proportion="0.88603354">
+            <state line="659" column="0" selection-start="25377" selection-end="25377" vertical-scroll-proportion="0.750838">
               <folding />
             </state>
           </provider>
@@ -417,7 +416,7 @@
       <recent name="ru.pda.chemistry.web.sections" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ConstructorServiceTest">
+  <component name="RunManager" selected="JUnit.GeneratorServiceTest">
     <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
@@ -791,20 +790,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/ConstructorServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="640" column="14" selection-start="22147" selection-end="22147" vertical-scroll-proportion="0.37896827">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/ConstructorServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="326" column="0" selection-start="9769" selection-end="9769" vertical-scroll-proportion="0.3670635">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/entities/attributeValue/AttributeValueFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="13" selection-start="390" selection-end="390" vertical-scroll-proportion="0.08893957">
@@ -812,30 +797,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/entities/attributeValue/AttributeValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="22" selection-start="175" selection-end="175" vertical-scroll-proportion="0.17445838">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/entities/attributeValue/BooleanAttributeValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="214" selection-end="214" vertical-scroll-proportion="0.17445838">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/entities/attributeValue/DoubleAttributeValue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="13" selection-start="286" selection-end="286" vertical-scroll-proportion="0.17445838">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/entities/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="9" selection-start="1108" selection-end="1108" vertical-scroll-proportion="0.88141394">
           <folding />
         </state>
       </provider>
@@ -868,31 +832,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/ConstructorServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="27" selection-start="2001" selection-end="2001" vertical-scroll-proportion="0.35418993">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chemistryDb/sql/dropTables.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="17" selection-end="17" vertical-scroll-proportion="0.018994413">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/ConstructorServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="162" column="0" selection-start="4187" selection-end="4187" vertical-scroll-proportion="0.019318182">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/entities/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="0" selection-start="1343" selection-end="1343" vertical-scroll-proportion="0.79106146">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/chemistryDb/sql/createTables.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="17" selection-start="1098" selection-end="1106" vertical-scroll-proportion="0.83128494">
+        <state line="8" column="29" selection-start="134" selection-end="163" vertical-scroll-proportion="0.2620424">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/GeneratorServiceTest.java">
+    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/entities/attributeValue/BooleanAttributeValue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="781" column="7" selection-start="29741" selection-end="29748" vertical-scroll-proportion="0.96091956">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/GeneratorServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="66" selection-start="2464" selection-end="2464" vertical-scroll-proportion="0.40893856">
+        <state line="23" column="0" selection-start="489" selection-end="489" vertical-scroll-proportion="0.7206166">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/sql/SqlConnector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="226" column="1" selection-start="6066" selection-end="6066" vertical-scroll-proportion="0.88603354">
+        <state line="161" column="0" selection-start="4317" selection-end="4317" vertical-scroll-proportion="0.37764934">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/entities/attributeValue/AttributeValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="25" selection-start="299" selection-end="299" vertical-scroll-proportion="0.4040747">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/GeneratorServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="659" column="0" selection-start="25377" selection-end="25377" vertical-scroll-proportion="0.750838">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chemistryDb/src/ru/pda/chemistry/service/GeneratorServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="0" selection-start="1853" selection-end="1853" vertical-scroll-proportion="0.9602339">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

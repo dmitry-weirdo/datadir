@@ -15,6 +15,7 @@ create table Entity
     name      varchar(255) not null,
     section_id integer not null,
     table_name varchar(255),
+    generator_name varchar(255),
 
     primary key(id),
     unique(name),

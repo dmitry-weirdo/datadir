@@ -27,18 +27,26 @@ public class GeneratorServiceImpl implements GeneratorService
 		String tableName = getConcatenation(this.sb, "entity_table_", entity.getId().toString());
 		entity.setTableName(tableName);
 
+		String generatorName = getConcatenation(this.sb, tableName, "_gen");
+		entity.setGeneratorName(generatorName);
+
 		StringBuffer sb = new StringBuffer();
-		sb.append("create table ");
-		sb.append("`").append(tableName).append("`");
+		sb.append("create table ").append(tableName);
 		sb.append("(");
-		sb.append("`id` int(11) NOT NULL AUTO_INCREMENT,");
-		sb.append("`source` varchar(255) NOT NULL,");
+		sb.append("id integer not null, ");
+		sb.append("source varchar(255) not null, ");
 
 		fillEntityAttributesScript(sb, entity);
 
-		sb.append("PRIMARY KEY (`id`)");
-		sb.append(") ENGINE=InnoDB DEFAULT CHARSET=cp1251;");
+		sb.append("primary key(id)");
+		sb.append(")");
 
+		// todo: create generator
+		StringBuffer genSb = new StringBuffer();
+		genSb.append("create generator ").append(generatorName);
+
+		StringBuffer setGenSb = new StringBuffer();
+		setGenSb.append("set generator ").append(generatorName).append(" to 0");
 
 		SqlConnector connector = SqlConnector.create();
 
@@ -47,8 +55,12 @@ public class GeneratorServiceImpl implements GeneratorService
 			// create table
 			connector.executeUpdate(sb.toString());
 
-			// fill entity's table name
-			getConcatenation(sb, "update entity set table_name = '", entity.getTableName(), "' where id = ", entity.getId().toString());
+			// create generator and set it to 0
+			connector.executeUpdate(genSb.toString());
+			connector.executeUpdate(setGenSb.toString());
+
+			// fill entity's table name and generator name
+			getConcatenation(sb, "update entity set table_name = '", entity.getTableName(), "', generator_name = '", entity.getGeneratorName(), "' where id = ", entity.getId().toString());
 			connector.executeUpdate(sb.toString());
 
 			// fill attributes' column names
@@ -75,31 +87,28 @@ public class GeneratorServiceImpl implements GeneratorService
 		{
 			case BOOLEAN:
 				columnName = getConcatenation(this.sb, "bool_", attribute.getId().toString());
-				sb.append("`").append(columnName).append("` ").append("tinyint(1) DEFAULT NULL,");
+				sb.append(columnName).append(" smallint, ");
 				break;
 
 			case INTEGER:
 				columnName = getConcatenation(this.sb, "int_", attribute.getId().toString());
-				sb.append("`").append(columnName).append("` ").append("bigint(11) DEFAULT NULL,"); 
+				sb.append(columnName).append(" bigint, ");
 				break;
 
 			case DOUBLE:
 				columnName = getConcatenation(this.sb, "double_", attribute.getId().toString());
-				sb.append("`").append(columnName).append("` ").append("double(15,3) DEFAULT NULL,"); // todo: somewhen use set precision
+				sb.append(columnName).append(" numeric(15,3), "); // todo: somewhen use set precision
 				break;
 
 			case STRING:
 				columnName = getConcatenation(this.sb, "string_", attribute.getId().toString());
-				sb.append("`").append(columnName).append("` ").append("varchar(255) DEFAULT NULL,"); 
+				sb.append(columnName).append(" varchar(255), ");
 				break;
 
 			case ENUM:
 				columnName = getConcatenation(this.sb, "enum_", attribute.getId().toString());
-				String columnFkName = getConcatenation(this.sb, columnName, "_fk");
-
-				sb.append("`").append(columnName).append("` ").append("int(11) DEFAULT NULL,");
-				sb.append("KEY `").append(columnFkName).append("` (`").append(columnName).append("`),");
-				sb.append("CONSTRAINT `").append(columnFkName).append("` FOREIGN KEY (`").append(columnName).append("`) REFERENCES `enum` (`id`),");
+				sb.append(columnName).append(" integer, ");
+				sb.append("foreign key(").append(columnName).append(") references Enum(id), ");
 				break;
 		}
 
@@ -119,7 +128,7 @@ public class GeneratorServiceImpl implements GeneratorService
 			connector.executeUpdate(sb.toString());
 
 			sb.delete(0, sb.length());
-			sb.append("update entity set table_name = null where id = ").append(entity.getId());
+			sb.append("update entity set table_name = null, generator_name = null where id = ").append(entity.getId());
 			connector.executeUpdate(sb.toString());
 		}
 		finally
@@ -251,7 +260,7 @@ public class GeneratorServiceImpl implements GeneratorService
 
 		try
 		{
-			getConcatenation(sb, "insert into ", entity.getTableName(), " ",	"(source) values('", source, "')");
+			getConcatenation(sb, "insert into ", entity.getTableName(), " ",	"(id, source) values(gen_id(", entity.getGeneratorName(), ", 1), '", source, "')");
 			connector.executeUpdate(sb.toString());
 
 			resultSet = connector.getResultSetNext(getConcatenation(sb, "select max(id) from ", entity.getTableName()));
