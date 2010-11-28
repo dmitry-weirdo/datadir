@@ -218,10 +218,10 @@ public class SqlConnector
 	private Connection connection;
 
 	// todo: get this all from some .xml config (choosing of DB and maybe name\password too)
-	private static final String USER_NAME = "root";
-	private static final String PASSWORD = "root";
-	private static final String DATABASE_URL = "jdbc:mysql://localhost/chemistry_db";
+	private static final String USER_NAME = "sysdba";
+	private static final String PASSWORD = "masterkey";
+	private static final String DATABASE_URL = "jdbc:firebirdsql://localhost:3050/D:\\_fb\\datadir.GDB";
+	private static final String DRIVER_CLASS = "org.firebirdsql.jdbc.FBDriver";
 
-	private static final String DRIVER_CLASS = "com.mysql.jdbc.Driver";
 	private static final Logger logger = Logger.getLogger(SqlConnector.class); // todo: use configurator to define whether to log sql
 }

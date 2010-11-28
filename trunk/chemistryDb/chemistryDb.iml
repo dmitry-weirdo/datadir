@@ -30,14 +30,24 @@
             <attribute name="method" value="1" />
             <attribute name="URI" value="/WEB-INF/classes" />
           </containerElement>
-          <containerElement type="library" name="junit" level="application">
+          <containerElement type="library" name="javaee" level="application">
             <attribute name="method" value="0" />
-            <attribute name="URI" value="/WEB-INF/lib" />
+            <attribute name="URI" value="&lt;N/A&gt;" />
           </containerElement>
           <containerElement type="library" level="module">
             <attribute name="method" value="0" />
             <attribute name="URI" value="&lt;N/A&gt;" />
             <url>jar://$APPLICATION_HOME_DIR$/lib/j2ee.jar!/</url>
+          </containerElement>
+          <containerElement type="library" level="module">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib/jaybird-2.1.6.jar" />
+            <url>jar://$MODULE_DIR$/lib/jaybird-2.1.6.jar!/</url>
+          </containerElement>
+          <containerElement type="library" level="module">
+            <attribute name="method" value="0" />
+            <attribute name="URI" value="/WEB-INF/lib" />
+            <url>jar://$MODULE_DIR$/lib/junit-4.5.jar!/</url>
           </containerElement>
           <containerElement type="library" level="module">
             <attribute name="method" value="1" />
@@ -82,7 +92,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/mysql-connector-java-5.1.12-bin.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/junit-4.5.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -91,7 +101,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/junit-4.5.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/firebirdsql-full.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
