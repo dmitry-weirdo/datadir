@@ -20,7 +20,7 @@ public class BooleanAttributeValue extends AttributeValue
 		if (value == null)
 			return "null";
 
-		return value.toString();
+		return value ? "1" : "0";
 	}
 	public String getHtmlAttributeValue() {
 		if (value == null)
