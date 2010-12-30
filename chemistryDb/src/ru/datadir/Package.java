@@ -10,4 +10,38 @@ package ru.datadir;
  */
 public class Package
 {
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public Integer getParentId() {
+		return parentId;
+	}
+	public void setParentId(Integer parentId) {
+		this.parentId = parentId;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	/**
+	 *  од раздела.
+	 */
+	private Integer id;
+
+	/**
+	 *  од родительского раздела. <br/>
+	 * ƒл€ корневого раздела равен <code>null</code>.
+	 */
+	private Integer parentId;
+
+	/**
+	 * Ќазвание раздела. Ќазвание уникально на текущем уровне (внутри одного родительского раздела либо среди корневых разделов).
+	 */
+	private String name;
 }
