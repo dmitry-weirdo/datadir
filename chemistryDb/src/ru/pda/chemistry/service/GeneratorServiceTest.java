@@ -677,7 +677,7 @@ public class GeneratorServiceTest
 		intAttributeValue.setValue(null);
 		attributeValues.add(intAttributeValue);
 
-		stringAttributeValue = new StringAttributeValue();
+		stringAttributeValue = new StringAttributeValue();             
 		stringAttributeValue.setAttribute(stringAttribute);
 		stringAttributeValue.setValue(null);
 		attributeValues.add(stringAttributeValue);

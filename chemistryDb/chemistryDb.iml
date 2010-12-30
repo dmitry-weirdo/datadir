@@ -30,10 +30,6 @@
             <attribute name="method" value="1" />
             <attribute name="URI" value="/WEB-INF/classes" />
           </containerElement>
-          <containerElement type="library" name="javaee" level="application">
-            <attribute name="method" value="0" />
-            <attribute name="URI" value="&lt;N/A&gt;" />
-          </containerElement>
           <containerElement type="library" level="module">
             <attribute name="method" value="1" />
             <attribute name="URI" value="/WEB-INF/lib/firebirdsql-full.jar" />
@@ -46,6 +42,11 @@
           </containerElement>
           <containerElement type="library" level="module">
             <attribute name="method" value="0" />
+            <attribute name="URI" value="&lt;N/A&gt;" />
+            <url>jar://$MODULE_DIR$/lib/javaee.jar!/</url>
+          </containerElement>
+          <containerElement type="library" level="module">
+            <attribute name="method" value="0" />
             <attribute name="URI" value="/WEB-INF/lib" />
             <url>jar://$MODULE_DIR$/lib/junit-4.5.jar!/</url>
           </containerElement>
@@ -53,6 +54,10 @@
             <attribute name="method" value="1" />
             <attribute name="URI" value="/WEB-INF/lib/log4j.jar" />
             <url>jar://$MODULE_DIR$/lib/log4j.jar!/</url>
+          </containerElement>
+          <containerElement type="library" name="javaee" level="application">
+            <attribute name="method" value="0" />
+            <attribute name="URI" value="&lt;N/A&gt;" />
           </containerElement>
           <containerElement type="library" level="module">
             <attribute name="method" value="1" />
