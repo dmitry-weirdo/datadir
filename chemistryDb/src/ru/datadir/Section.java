@@ -8,7 +8,7 @@ package ru.datadir;
 /**
  * Раздел.
  */
-public class Package
+public class Section
 {
 	public Integer getId() {
 		return id;
@@ -16,11 +16,17 @@ public class Package
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public Integer getParentId() {
-		return parentId;
+	public Section getParent() {
+		return parent;
 	}
-	public void setParentId(Integer parentId) {
-		this.parentId = parentId;
+	public void setParent(Section parent) {
+		this.parent = parent;
+	}
+	public String getCreatedBy() {
+		return createdBy;
+	}
+	public void setCreatedBy(String createdBy) {
+		this.createdBy = createdBy;
 	}
 	public String getName() {
 		return name;
@@ -35,10 +41,15 @@ public class Package
 	private Integer id;
 
 	/**
-	 * Код родительского раздела. <br/>
+	 * Родительский раздел. <br/>
 	 * Для корневого раздела равен <code>null</code>.
 	 */
-	private Integer parentId;
+	private Section parent;
+
+	/**
+	 * Логин {@linkplain User пользователя}, создавшего раздел.
+	 */
+	private String createdBy;
 
 	/**
 	 * Название раздела. Название уникально на текущем уровне (внутри одного родительского раздела либо среди корневых разделов).

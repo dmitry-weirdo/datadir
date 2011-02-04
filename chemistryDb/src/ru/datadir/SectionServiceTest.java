@@ -10,6 +10,6 @@ import junit.framework.TestCase;
 /**
  * Тест сервиса работы с разделами
  */
-public class PackageServiceTest extends TestCase
+public class SectionServiceTest extends TestCase
 {
 }

@@ -9,13 +9,15 @@ import java.util.List;
 
 /**
  * Сервис БД, работающий с разделами.
+ * // todo: везде выбрасывать экспешны, если нет прав
+ * // todo: методы работы со справочниками
  */
-public interface PackageService
+public interface SectionService
 {
 	/**
 	 * @return список корневых разделов, упорядоченный по названию.
 	 */
-	List<Package> getRootPackages();
+	List<Section> getRootSections();
 
 	/**
 	 * Создает корневой раздел. ParentId (код родительского раздела) для корневого раздела устанавливается в <code>null</code>.
@@ -23,22 +25,24 @@ public interface PackageService
 	 * @return код созданного раздела
 	 * @throws ru.datadir.ConstraintException если корневой раздел с таким названием (независимо от регистра) уже существует. 
 	 */
-	Integer createRootPackage(String name) throws ConstraintException;
+	Integer createRootSection(String name) throws ConstraintException;
 
 	/**
 	 * Удаляет корневой раздел. Вместе с разделом удаляются все подразделы со всеми справочниками.<br/>
 	 * Если указан код несуществующего раздела, ничего не происходит.
 	 * // todo: think about выбрасываться, если в разделе есть справочники на любой глубине
+	 * // todo: Неясно, чем этот метод отличается от deleteSection, наверно, этот метод надо будет убрать.
 	 * @param id код удаляемого раздела.
+	 * @throws ru.datadir.ConstraintException если текущий пользователь не имеет права на удаление указанного раздела
 	 */
-	void deleteRootPackage(Integer id);
+	void deleteRootSection(Integer id) throws ConstraintException;
 
 
 	/**
 	 * @param parentId код раздела
 	 * @return список непосредственных подразделов указанного раздела, упорядоченыный по назнванию. (То есть тех, у которых parentId равен указанному)
 	 */
-	List<Package> getPackages(Integer parentId);
+	List<Section> getSections(Integer parentId);
 
 	/**
 	 * Создает подраздел в указанном разделе. ParentId созданного подразедела устанавливается в parentId (код раздела). 
@@ -48,12 +52,12 @@ public interface PackageService
 	 * @throws ConstraintException если раздел не существует (не найден по parentId),
 	 * либо в разделе уже существует подраздел с именем, равным name (независимо от регистра) 
 	 */
-	Integer createPackage(Integer parentId, String name) throws ConstraintException;
+	Integer createSection(Integer parentId, String name) throws ConstraintException;
 
 	/**
 	 * Удаляет подраздел. Вместе с ним удаляются все его подразделы вместе со справочниками.
 	 * // todo: think about выбрасываться, если в разделе есть справочники на любой глубине
 	 * @param id код подраздела.
 	 */
-	void deletePackage(Integer id);
+	void deleteSection(Integer id);
 }
