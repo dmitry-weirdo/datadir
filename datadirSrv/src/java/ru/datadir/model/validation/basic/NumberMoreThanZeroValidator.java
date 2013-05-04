@@ -15,12 +15,12 @@ import java.util.List;
 public class NumberMoreThanZeroValidator extends BasicValidator<Number>
 {
 	@Override
-	protected boolean isValid(Number value) {
+	protected boolean isValid(Number value, Object... validationParameters) {
 		return ( value != null ) && ( value.intValue() > 0 );
 	}
 
 	@Override
-	protected List<String> getErrorMessages(Number value) {
+	protected List<String> getErrorMessages(Number value, Object... validationParameters) {
 		if (value == null)
 			return CollectionUtils.getOneElementList("Value cannot be null."); // todo: use locale-dependent properties
 

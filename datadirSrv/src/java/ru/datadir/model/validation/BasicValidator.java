@@ -13,11 +13,11 @@ import java.util.List;
 public abstract class BasicValidator<T> implements Validator<T>
 {
 	@Override
-	public ValidationResult validate(T value) {
+	public ValidationResult validate(T value, Object... validationParameters) {
 		ValidationResult result = new ValidationResult();
-		result.setValid( isValid(value) );
+		result.setValid( isValid(value, validationParameters) );
 
-		List<String> errorMessages = getErrorMessages(value);
+		List<String> errorMessages = getErrorMessages(value, validationParameters);
 		if (errorMessages == null)
 			errorMessages = Collections.emptyList(); // prevent return null in errorMessages field
 
@@ -26,7 +26,7 @@ public abstract class BasicValidator<T> implements Validator<T>
 		return result;
 	}
 
-	protected abstract boolean isValid(T value);
+	protected abstract boolean isValid(T value, Object... validationParameters);
 
-	protected abstract List<String> getErrorMessages(T value);
+	protected abstract List<String> getErrorMessages(T value, Object... validationParameters);
 }
