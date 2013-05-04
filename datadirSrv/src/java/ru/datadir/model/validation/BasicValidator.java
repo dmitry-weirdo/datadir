@@ -14,6 +14,8 @@ public abstract class BasicValidator<T> implements Validator<T>
 {
 	@Override
 	public ValidationResult validate(T value, Object... validationParameters) {
+		validateValidationParameters(validationParameters);
+
 		ValidationResult result = new ValidationResult();
 		result.setValid( isValid(value, validationParameters) );
 
@@ -24,6 +26,9 @@ public abstract class BasicValidator<T> implements Validator<T>
 		result.setErrorMessages(errorMessages);
 
 		return result;
+	}
+
+	protected void validateValidationParameters(Object... validationParameters) throws IncorrectValidationParameterException {
 	}
 
 	protected abstract boolean isValid(T value, Object... validationParameters);
