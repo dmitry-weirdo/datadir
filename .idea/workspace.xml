@@ -4,7 +4,11 @@
     <bookmark url="file://$PROJECT_DIR$/datadirSrv/src/java/ru/datadir/model/validation/basic/NumberMoreThanZeroValidatorTest.java" line="14" mnemonic="1" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="c566239b-850c-4507-a1cb-50dab33498a3" name="Default" comment="" />
+    <list default="true" readonly="true" id="c566239b-850c-4507-a1cb-50dab33498a3" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$" afterPath="$PROJECT_DIR$" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datadirSrv/src/java/ru/datadir/model/validation/basic/NotNullValidatorTest.java" afterPath="$PROJECT_DIR$/datadirSrv/src/java/ru/datadir/model/validation/basic/NotNullValidatorTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datadirSrv/src/java/ru/datadir/model/validation/basic/NumberMoreThanZeroValidator.java" afterPath="$PROJECT_DIR$/datadirSrv/src/java/ru/datadir/model/validation/basic/NumberMoreThanZeroValidator.java" />
+    </list>
     <ignored path="datadir.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/User.java" changelist="c566239b-850c-4507-a1cb-50dab33498a3" time="1367674809063" ignored="false" />
@@ -77,7 +81,7 @@
     <favorites_list name="datadir" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.27123287">
+    <splitter split-orientation="horizontal" split-proportion="0.48219177">
       <split-first>
         <leaf>
           <file leaf-file-name="NotNullValidator.java" pinned="false" current="false" current-in-tab="false">
@@ -94,7 +98,7 @@
           <file leaf-file-name="NotNullValidatorTest.java" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/datadirSrv/src/java/ru/datadir/model/validation/basic/NotNullValidatorTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="22" column="28" selection-start="524" selection-end="578" vertical-scroll-proportion="0.43539">
+                <state line="14" column="74" selection-start="349" selection-end="349" vertical-scroll-proportion="0.27293578">
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -117,10 +121,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="CollectionUtils.java" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="CollectionUtils.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/datadirSrv/src/java/ru/datadir/model/util/CollectionUtils.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="24" column="71" selection-start="550" selection-end="550" vertical-scroll-proportion="0.4678899">
+                <state line="13" column="0" selection-start="266" selection-end="270" vertical-scroll-proportion="0.0">
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -128,10 +132,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="NumberMoreThanZeroValidator.java" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="NumberMoreThanZeroValidator.java" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/datadirSrv/src/java/ru/datadir/model/validation/basic/NumberMoreThanZeroValidator.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="16" column="49" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0">
+                <state line="6" column="75" selection-start="165" selection-end="165" vertical-scroll-proportion="0.11874273">
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -156,12 +160,12 @@
         <option value="$PROJECT_DIR$/datadirSrv/src/java/ru/datadir/model/validation/ValidationResult.java" />
         <option value="$PROJECT_DIR$/datadirSrv/src/java/ru/datadir/model/util/ListUtils.java" />
         <option value="$PROJECT_DIR$/datadirSrv/src/java/ru/datadir/model/util/CollectionUtils.java" />
-        <option value="$PROJECT_DIR$/datadirSrv/src/java/ru/datadir/model/validation/basic/NotNullValidatorTest.java" />
         <option value="$PROJECT_DIR$/datadirSrv/src/java/ru/datadir/model/validation/Validator.java" />
         <option value="$PROJECT_DIR$/datadirSrv/src/java/ru/datadir/model/validation/BasicValidator.java" />
         <option value="$PROJECT_DIR$/datadirSrv/src/java/ru/datadir/model/validation/basic/NotNullValidator.java" />
         <option value="$PROJECT_DIR$/datadirSrv/src/java/ru/datadir/model/validation/basic/NumberMoreThanZeroValidator.java" />
         <option value="$PROJECT_DIR$/datadirSrv/src/java/ru/datadir/model/validation/basic/NumberMoreThanZeroValidatorTest.java" />
+        <option value="$PROJECT_DIR$/datadirSrv/src/java/ru/datadir/model/validation/basic/NotNullValidatorTest.java" />
       </list>
     </option>
   </component>
@@ -609,7 +613,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1928" height="1044" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -785,9 +789,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datadirSrv/src/java/ru/datadir/model/validation/basic/NumberMoreThanZeroValidator.java">
+    <entry file="file://$PROJECT_DIR$/datadirSrv/src/java/ru/datadir/model/util/CollectionUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="49" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0">
+        <state line="13" column="0" selection-start="266" selection-end="270" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -796,7 +800,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/datadirSrv/src/java/ru/datadir/model/validation/basic/NotNullValidatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="28" selection-start="524" selection-end="578" vertical-scroll-proportion="0.43539">
+        <state line="14" column="74" selection-start="349" selection-end="349" vertical-scroll-proportion="0.27293578">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -812,9 +816,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datadirSrv/src/java/ru/datadir/model/util/CollectionUtils.java">
+    <entry file="file://$PROJECT_DIR$/datadirSrv/src/java/ru/datadir/model/validation/basic/NumberMoreThanZeroValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="71" selection-start="550" selection-end="550" vertical-scroll-proportion="0.4678899">
+        <state line="6" column="75" selection-start="165" selection-end="165" vertical-scroll-proportion="0.11874273">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
