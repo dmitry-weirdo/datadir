@@ -1,0 +1,104 @@
+html, body { margin: 0; padding: 0; }
+body { font-size: 12pt; font-family: Tahoma, sans-serif; }
+#ruler { position: absolute; width: 100%; font-size: 0; }
+#all { width: 100%; height: 100%; min-width: 600px; }
+
+#content { padding: 0 1.5em; }
+
+h4 { color: cadetblue; font-size: 110%; margin: 1em 0; }
+table { border: 1px solid cadetblue; }
+td { border: 1px solid cadetblue; font-weight: normal; text-align: center; }
+th { padding: 10px; border: 1px solid cadetblue; font-weight: bold; text-align: center; }
+td.title { padding: 10px; text-align: left; }
+td.empty { padding: 10px; text-align: center; }
+td.button { padding: 5px; }
+
+p.error { font-size: 90%; color: red; }
+p.title { font-size: 110%; font-weight: normal; color: blue; }
+p.title-disabled { font-size: 110%; font-weight: normal; color: gray; text-decoration: underline; }
+p.title-disabled a { color: gray; }
+
+a, a:visited { color: #0354cd; }
+/*a:hover { text-decoration: none; }*/
+a:focus, a:hover, a:active { outline: none; } /* this hides ff3 buggy dots around and inside links */
+
+td.button a, td.button a:visited { color: #FFFFFF; line-height: 0; font-size: 0; } /* color: white hides ie dot on link */
+td.button a.add, td.button a:visited.add { color: #BE6F62; } /* color: hides ie dot on link, it's color of border of add cross */
+
+div.separator { width: 800px; height: 1px; background: cadetblue; font-size: 0; line-height: 0; } 
+
+span.save {
+	display: block; /* using span inside <a>, because <div> inside <a> is not valid html */
+	width: 32px;
+	height: 32px;
+	margin-left: auto; margin-right: auto;
+	background: url('../img/save.png') no-repeat white;
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost:8080/chemistryWeb/img/save.png',sizingMethod='crop');
+	cursor: pointer;
+}
+
+span.add {
+	display: block; /* using span inside <a>, because <div> inside <a> is not valid html */
+	width: 32px;
+	height: 32px;
+	margin-left: auto; margin-right: auto;
+	background: url('../img/add.png') no-repeat;
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost:8080/chemistryWeb/img/add.png',sizingMethod='crop');
+	cursor: pointer;
+}
+
+span.edit {
+	display: block; /* using span inside <a>, because <div> inside <a> is not valid html */
+	width: 32px;
+	height: 32px;
+	margin-left: auto; margin-right: auto;
+	background: url('../img/edit.png') no-repeat;
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost:8080/chemistryWeb/img/edit.png',sizingMethod='crop');
+	cursor: pointer;
+}
+span.delete {
+	display: block; /* using span inside <a>, because <div> inside <a> is not valid html */
+	width: 32px; height: 32px;
+	margin-left: auto; margin-right: auto;
+	background: url('../img/delete.png') no-repeat;
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost:8080/chemistryWeb/img/delete.png',sizingMethod='crop');
+	cursor: pointer;
+}
+span.empty {
+	width: 32px; height: 32px;
+	margin-left: auto; margin-right: auto;
+}
+
+
+div.frm {
+	display: none;
+	position: absolute;
+	top: 11em;
+	width: 20em;
+	z-index: 11;
+	background-color: #FFFFFF;
+	border: 1px solid black;
+}
+div.frm .msg {
+	padding: 10px;	
+}
+div.frm .warn {
+	color: red;
+	margin: 10px;
+}
+div.frm .confirm {
+	margin: 10px;
+}
+div.frm .buttons {
+	margin: 10px;
+	margin-top: 20px;
+}
+div.frm input {
+	width: 10em;
+}
+
+#shade { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; background: url('http://localhost:8080/chemistryWeb/img/shade.png'); }
