@@ -15,12 +15,12 @@ import java.util.List;
 public class NotNullValidator extends BasicValidator<Object>
 {
 	@Override
-	protected boolean isValid(Object value) {
+	protected boolean isValid(Object value, Object... validationParameters) {
 		return value != null;
 	}
 
 	@Override
-	protected List<String> getErrorMessages(Object value) {
+	protected List<String> getErrorMessages(Object value, Object... validationParameters) {
 		if (value == null)
 			return CollectionUtils.getOneElementList("Value cannot be null."); // todo: use locale-dependent properties
 

@@ -15,5 +15,5 @@ public interface Validator<T>
 	 * @param value значение
 	 * @return результат валидации
 	 */
-	ValidationResult validate(T value);
+	ValidationResult validate(T value, Object... validationParameters);
 }
