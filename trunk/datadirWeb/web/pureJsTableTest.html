@@ -5,6 +5,47 @@
 	<title>Pure js table test</title>
 	<script type="text/javascript" charset="utf-8" src="./js/ru.datadir.DomHelper.js"></script>
 	<script type="text/javascript" charset="utf-8" src="./js/pureJsTable.js"></script>
+
+	<style type="text/css">
+		body {
+			font-family: verdana,​helvetica,​arial,​sans-serif;
+			font-size: 12px;
+		}
+
+		h2 {
+			font-size: 16px;
+		}
+
+		table {
+			border-collapse: collapse;
+		}
+
+		table, th, td {
+			border: 1px solid #98BF21;
+			font-size: 12px;
+		}
+
+
+		th {
+			background-color: #A7C942;
+			color: white;
+			padding: 5px;
+		}
+
+		td {
+			padding: 5px;
+		}
+
+		.odd {
+			background-color: #FFFFFF;
+		}
+
+		.even {
+			background-color: #EAF2D3;
+		}
+
+
+	</style>
 </head>
 <body>
 <div id="table-container"></div>
@@ -38,6 +79,8 @@
 		  containerId: CONTAINER_ID
 		, metadata: metadata
 		, data: data
+		, oddTrClass: 'odd'
+		, evenTrClass: 'even'
 	});
 </script>
 
