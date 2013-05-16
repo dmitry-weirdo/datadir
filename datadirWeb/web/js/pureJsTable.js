@@ -42,7 +42,15 @@ function createEntityTable(config) {
 	for (i = 0; i < config.data.length; i++)
 	{
 		var record = config.data[i];
-		var recordRow = dh.createEl(dh.TR_TAG);
+
+		var recordRowClass = null;
+		if ( (i % 2 == 0) && (config.evenTrClass) )
+			recordRowClass = config.evenTrClass;
+		else if ( (i % 2 == 1) && (config.oddTrClass) )
+			recordRowClass = config.oddTrClass;
+
+
+		var recordRow = dh.createEl(dh.TR_TAG, null, recordRowClass);
 
 		for (j = 0; j < config.metadata.attributes.length; j++)
 		{
@@ -72,7 +80,14 @@ function createEntityTable(config) {
 		tableBody.appendChild(recordRow);
 	}
 
-	var createRow = dh.createEl(dh.TR_TAG);
+	var createRowClass = null;
+	if ( (config.data.length % 2 == 0) && (config.evenTrClass) )
+		createRowClass = config.evenTrClass;
+	else if ( (config.data.length % 2 == 1) && (config.oddTrClass) )
+		createRowClass = config.oddTrClass;
+
+	var createRow = dh.createEl(dh.TR_TAG, null, createRowClass);
+
 	var leftCreateCell = dh.createEl(dh.TD_TAG, null, null, NBSP_CODE);
 	leftCreateCell.setAttribute(dh.COL_SPAN_ATTRIBUTE, config.metadata.attributes.length);
 	leftCreateCell.colSpan = config.metadata.attributes.length; // for IE // todo: do this only for IE
