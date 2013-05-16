@@ -1,0 +1,45 @@
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pure js table test</title>
+	<script type="text/javascript" charset="utf-8" src="./js/ru.datadir.DomHelper.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/pureJsTable.js"></script>
+</head>
+<body>
+<div id="table-container"></div>
+
+<script type="text/javascript">
+	var CONTAINER_ID = 'table-container';
+
+	var metadata = {
+		  id: 1
+		, name: 'Car'
+		, label: 'Машина'
+		, comment: 'Тестовая таблица'
+
+		, attributes: [
+			  { id: 1, displayOrder: 1, name: 'brand', label: 'Марка', type: 'string' }
+			, { id: 2, displayOrder: 2, name: 'power', label: 'Мощность двигателя', type: 'float' }
+			, { id: 3, displayOrder: 3, name: 'doorsCount', label: 'Количество дверей', type: 'integer' }
+			, { id: 4, displayOrder: 4, name: 'color', label: 'Цвет', type: 'string' }
+			, { id: 5, displayOrder: 5, name: 'comment', label: 'Комментарий', type: 'string' }
+		]
+	};
+
+	var data = [
+		  { brand: 'Ferrari F40', power: 666.66, doorsCount: 2, color: 'Ferrari red', comment: 'Great car' }
+		, { brand: 'ЗАЗ-968 М', power: 75.3, doorsCount: 3, color: 'синий', comment: 'Персонаж анекдотов, ушастый запорожец' }
+		, { brand: 'McLaren F1', power: 580.12, doorsCount: 2, color: '#f1f032' }
+		, { brand: 'ВАЗ-2101', power: 40, doorsCount: 5, color: 'металлик ржавый такой' }
+	];
+
+	createEntityTable({
+		  containerId: CONTAINER_ID
+		, metadata: metadata
+		, data: data
+	});
+</script>
+
+</body>
+</html>

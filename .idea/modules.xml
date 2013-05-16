@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/chemistryDb/chemistryDb.iml" filepath="$PROJECT_DIR$/chemistryDb/chemistryDb.iml" />
       <module fileurl="file://$PROJECT_DIR$/datadirSrv/datadirSrv.iml" filepath="$PROJECT_DIR$/datadirSrv/datadirSrv.iml" />
+      <module fileurl="file://$PROJECT_DIR$/datadirWeb/datadirWeb.iml" filepath="$PROJECT_DIR$/datadirWeb/datadirWeb.iml" />
     </modules>
   </component>
 </project>

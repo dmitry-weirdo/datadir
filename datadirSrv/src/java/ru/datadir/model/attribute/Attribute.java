@@ -27,6 +27,12 @@ public class Attribute
 	public void setEntityId(Long entityId) {
 		this.entityId = entityId;
 	}
+	public Integer getDisplayOrder() {
+		return displayOrder;
+	}
+	public void setDisplayOrder(Integer displayOrder) {
+		this.displayOrder = displayOrder;
+	}
 	public AttributeType getType() {
 		return type;
 	}
@@ -79,6 +85,11 @@ public class Attribute
 	 * Код сущности, к которой относится атрибут.
 	 */
 	private Long entityId;
+
+	/**
+	 * Порядок поля среди полей сущности.
+	 */
+	private Integer displayOrder;
 
 	/**
 	 * Тип атрибута.
