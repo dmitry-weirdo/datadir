@@ -1,7 +1,8 @@
-package ru.datadir.model.validation.basic;
+package ru.datadir.model.validation;
 
 import org.junit.Test;
 import ru.datadir.model.validation.ValidationResult;
+import ru.datadir.model.validation.basic.NotNullValidator;
 
 import java.util.List;
 

@@ -1,10 +1,11 @@
-package ru.datadir.model.validation.basic;
+package ru.datadir.model.validation;
 
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import ru.datadir.model.validation.IncorrectValidationParameterException;
 import ru.datadir.model.validation.ValidationResult;
+import ru.datadir.model.validation.basic.NumberMoreThanValidator;
 
 import static junit.framework.Assert.assertEquals;
 
