@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
+  <data-source source="LOCAL" name="datadirDS" product="Firebird 2.54WI" version="WI-V2.5.2.26540" jdbc-version="4.1" driver-name="Jaybird JCA/JDBC driver" driver-version="2.2" uuid="3d272921-1b52-428a-91eb-0d559cafeef3">
+    <extra-name-characters>$</extra-name-characters>
+    <identifier-quote-string>"</identifier-quote-string>
+    <synchronize>true</synchronize>
+    <jdbc-driver>org.firebirdsql.jdbc.FBDriver</jdbc-driver>
+    <jdbc-url>jdbc:firebirdsql://localhost:3050/c:/_fb/datadir.fdb</jdbc-url>
+    <user-name>sysdba</user-name>
+    <user-password>dfc7dfcbdfd9dfdedfcfdfd8dfc1dfcfdfd3</user-password>
+    <libraries>
+      <library>
+        <url>file://$PROJECT_DIR$/../lib/jdbc/firebird/Jaybird-2.2.3JDK_1.7/jaybird-full-2.2.3.jar</url>
+      </library>
+    </libraries>
+    <schema name="" catalog="" />
+    <table name="ATTRIBUTE" schema="" catalog="" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="ENTITY_ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="DISPLAY_ORDER" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="ATTRIBUTE_TYPE_ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="LABEL" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="ALLOW_BLANK" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="MAX_LENGTH" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="COMMENT" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PK_ATTRIBUTE" columns="ID" />
+      <foreign-key name="FK_ATTRIBUTE_2" columns="ATTRIBUTE_TYPE_ID" ref-table="ATTRIBUTE_TYPE" ref-schema="" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2" />
+      <foreign-key name="FK_ATTRIBUTE_1" columns="ENTITY_ID" ref-table="ENTITY" ref-schema="" ref-catalog="" ref-columns="ID" update-rule="3" delete-rule="3" deferrability="2" />
+    </table>
+    <table name="ATTRIBUTE_TYPE" schema="" catalog="" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="TYPE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="DATABASE_TYPE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="TITLE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PK_ATTRIBUTE_TYPE" columns="ID" />
+      <exported-key name="FK_ATTRIBUTE_2" table="ATTRIBUTE" schema="" catalog="" columns="ATTRIBUTE_TYPE_ID" />
+    </table>
+    <table name="ENTITY" schema="" catalog="" type="TABLE">
+      <column name="ID" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5" />
+      <column name="PACKAGE_ID" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="LABEL" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="COMMENT" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PK_ENTITY" columns="ID" />
+      <exported-key name="FK_ATTRIBUTE_1" table="ATTRIBUTE" schema="" catalog="" columns="ENTITY_ID" />
+    </table>
+    <table name="MON$ATTACHMENTS" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="MON$ATTACHMENT_ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$SERVER_PID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$STATE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="MON$ATTACHMENT_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="MON$USER" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="MON$ROLE" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="MON$REMOTE_PROTOCOL" sqlType="VARCHAR" length="10" precision="0" nullable="true" jdbcType="12" />
+      <column name="MON$REMOTE_ADDRESS" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="MON$REMOTE_PID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$CHARACTER_SET_ID" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="MON$TIMESTAMP" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93" />
+      <column name="MON$GARBAGE_COLLECTION" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="MON$REMOTE_PROCESS" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="MON$STAT_ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+    </table>
+    <table name="MON$CALL_STACK" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="MON$CALL_ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$STATEMENT_ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$CALLER_ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$OBJECT_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="MON$OBJECT_TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="MON$TIMESTAMP" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93" />
+      <column name="MON$SOURCE_LINE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$SOURCE_COLUMN" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$STAT_ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+    </table>
+    <table name="MON$CONTEXT_VARIABLES" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="MON$ATTACHMENT_ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$TRANSACTION_ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$VARIABLE_NAME" sqlType="VARCHAR" length="80" precision="0" nullable="true" jdbcType="12" />
+      <column name="MON$VARIABLE_VALUE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+    </table>
+    <table name="MON$DATABASE" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="MON$DATABASE_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="MON$PAGE_SIZE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="MON$ODS_MAJOR" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="MON$ODS_MINOR" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="MON$OLDEST_TRANSACTION" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$OLDEST_ACTIVE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$OLDEST_SNAPSHOT" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$NEXT_TRANSACTION" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$PAGE_BUFFERS" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$SQL_DIALECT" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="MON$SHUTDOWN_MODE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="MON$SWEEP_INTERVAL" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$READ_ONLY" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="MON$FORCED_WRITES" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="MON$RESERVE_SPACE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="MON$CREATION_DATE" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93" />
+      <column name="MON$PAGES" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <column name="MON$STAT_ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$BACKUP_STATE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+    </table>
+    <table name="MON$IO_STATS" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="MON$STAT_ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$STAT_GROUP" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="MON$PAGE_READS" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <column name="MON$PAGE_WRITES" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <column name="MON$PAGE_FETCHES" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <column name="MON$PAGE_MARKS" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
+    </table>
+    <table name="MON$MEMORY_USAGE" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="MON$STAT_ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$STAT_GROUP" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="MON$MEMORY_USED" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <column name="MON$MEMORY_ALLOCATED" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <column name="MON$MAX_MEMORY_USED" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <column name="MON$MAX_MEMORY_ALLOCATED" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
+    </table>
+    <table name="MON$RECORD_STATS" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="MON$STAT_ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$STAT_GROUP" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="MON$RECORD_SEQ_READS" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <column name="MON$RECORD_IDX_READS" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <column name="MON$RECORD_INSERTS" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <column name="MON$RECORD_UPDATES" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <column name="MON$RECORD_DELETES" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <column name="MON$RECORD_BACKOUTS" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <column name="MON$RECORD_PURGES" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
+      <column name="MON$RECORD_EXPUNGES" sqlType="BIGINT" length="19" precision="0" nullable="true" jdbcType="-5" />
+    </table>
+    <table name="MON$STATEMENTS" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="MON$STATEMENT_ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$ATTACHMENT_ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$TRANSACTION_ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$STATE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="MON$TIMESTAMP" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93" />
+      <column name="MON$SQL_TEXT" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="MON$STAT_ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+    </table>
+    <table name="MON$TRANSACTIONS" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="MON$TRANSACTION_ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$ATTACHMENT_ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$STATE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="MON$TIMESTAMP" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93" />
+      <column name="MON$TOP_TRANSACTION" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$OLDEST_TRANSACTION" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$OLDEST_ACTIVE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="MON$ISOLATION_MODE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="MON$LOCK_TIMEOUT" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="MON$READ_ONLY" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="MON$AUTO_COMMIT" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="MON$AUTO_UNDO" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="MON$STAT_ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+    </table>
+    <table name="RDB$BACKUP_HISTORY" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$BACKUP_ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="RDB$TIMESTAMP" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93" />
+      <column name="RDB$BACKUP_LEVEL" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="RDB$GUID" sqlType="CHAR" length="38" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$SCN" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="RDB$FILE_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <index name="RDB$INDEX_44" unique="true" columns="RDB$BACKUP_LEVEL,RDB$BACKUP_ID" />
+    </table>
+    <table name="RDB$CHARACTER_SETS" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$CHARACTER_SET_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$FORM_OF_USE" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$NUMBER_OF_CHARACTERS" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="RDB$DEFAULT_COLLATE_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$CHARACTER_SET_ID" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$SYSTEM_FLAG" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$DESCRIPTION" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$FUNCTION_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$BYTES_PER_CHARACTER" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <index name="RDB$INDEX_19" unique="true" columns="RDB$CHARACTER_SET_NAME" />
+      <index name="RDB$INDEX_25" unique="true" columns="RDB$CHARACTER_SET_ID" />
+    </table>
+    <table name="RDB$CHECK_CONSTRAINTS" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$CONSTRAINT_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$TRIGGER_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <index name="RDB$INDEX_14" unique="true" columns="RDB$CONSTRAINT_NAME" />
+      <index name="RDB$INDEX_40" unique="true" columns="RDB$TRIGGER_NAME" />
+    </table>
+    <table name="RDB$COLLATIONS" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$COLLATION_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$COLLATION_ID" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$CHARACTER_SET_ID" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$COLLATION_ATTRIBUTES" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$SYSTEM_FLAG" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$DESCRIPTION" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$FUNCTION_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$BASE_COLLATION_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$SPECIFIC_ATTRIBUTES" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <index name="RDB$INDEX_20" unique="true" columns="RDB$COLLATION_NAME" />
+      <index name="RDB$INDEX_26" unique="true" columns="RDB$COLLATION_ID,RDB$CHARACTER_SET_ID" />
+    </table>
+    <table name="RDB$DATABASE" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$DESCRIPTION" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$RELATION_ID" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$SECURITY_CLASS" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$CHARACTER_SET_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+    </table>
+    <table name="RDB$DEPENDENCIES" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$DEPENDENT_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$DEPENDED_ON_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$FIELD_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$DEPENDENT_TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$DEPENDED_ON_TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <index name="RDB$INDEX_27" unique="true" columns="RDB$DEPENDENT_NAME" />
+      <index name="RDB$INDEX_28" unique="true" columns="RDB$DEPENDED_ON_NAME" />
+    </table>
+    <table name="RDB$EXCEPTIONS" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$EXCEPTION_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$EXCEPTION_NUMBER" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="RDB$MESSAGE" sqlType="VARCHAR" length="1023" precision="0" nullable="true" jdbcType="12" />
+      <column name="RDB$DESCRIPTION" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$SYSTEM_FLAG" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <index name="RDB$INDEX_23" unique="true" columns="RDB$EXCEPTION_NAME" />
+      <index name="RDB$INDEX_24" unique="true" columns="RDB$EXCEPTION_NUMBER" />
+    </table>
+    <table name="RDB$FIELDS" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$FIELD_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$QUERY_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$VALIDATION_BLR" sqlType="BLOB SUB_TYPE 2" length="0" precision="0" nullable="true" jdbcType="1111" />
+      <column name="RDB$VALIDATION_SOURCE" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$COMPUTED_BLR" sqlType="BLOB SUB_TYPE 2" length="0" precision="0" nullable="true" jdbcType="1111" />
+      <column name="RDB$COMPUTED_SOURCE" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$DEFAULT_VALUE" sqlType="BLOB SUB_TYPE 2" length="0" precision="0" nullable="true" jdbcType="1111" />
+      <column name="RDB$DEFAULT_SOURCE" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$FIELD_LENGTH" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$FIELD_SCALE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$FIELD_TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$FIELD_SUB_TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$MISSING_VALUE" sqlType="BLOB SUB_TYPE 2" length="0" precision="0" nullable="true" jdbcType="1111" />
+      <column name="RDB$MISSING_SOURCE" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$DESCRIPTION" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$SYSTEM_FLAG" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$QUERY_HEADER" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$SEGMENT_LENGTH" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$EDIT_STRING" sqlType="VARCHAR" length="127" precision="0" nullable="true" jdbcType="12" />
+      <column name="RDB$EXTERNAL_LENGTH" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$EXTERNAL_SCALE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$EXTERNAL_TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$DIMENSIONS" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$NULL_FLAG" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$CHARACTER_LENGTH" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$COLLATION_ID" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$CHARACTER_SET_ID" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$FIELD_PRECISION" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <index name="RDB$INDEX_2" unique="true" columns="RDB$FIELD_NAME" />
+    </table>
+    <table name="RDB$FIELD_DIMENSIONS" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$FIELD_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$DIMENSION" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$LOWER_BOUND" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="RDB$UPPER_BOUND" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <index name="RDB$INDEX_36" unique="true" columns="RDB$FIELD_NAME" />
+    </table>
+    <table name="RDB$FILES" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$FILE_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="RDB$FILE_SEQUENCE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$FILE_START" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="RDB$FILE_LENGTH" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="RDB$FILE_FLAGS" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$SHADOW_NUMBER" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+    </table>
+    <table name="RDB$FILTERS" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$FUNCTION_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$DESCRIPTION" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$MODULE_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="RDB$ENTRYPOINT" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$INPUT_SUB_TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$OUTPUT_SUB_TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$SYSTEM_FLAG" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <index name="RDB$INDEX_17" unique="true" columns="RDB$INPUT_SUB_TYPE,RDB$OUTPUT_SUB_TYPE" />
+      <index name="RDB$INDEX_45" unique="true" columns="RDB$FUNCTION_NAME" />
+    </table>
+    <table name="RDB$FORMATS" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$RELATION_ID" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$FORMAT" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$DESCRIPTOR" sqlType="BLOB SUB_TYPE 6" length="0" precision="0" nullable="true" jdbcType="1111" />
+      <index name="RDB$INDEX_16" unique="true" columns="RDB$RELATION_ID,RDB$FORMAT" />
+    </table>
+    <table name="RDB$FUNCTIONS" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$FUNCTION_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$FUNCTION_TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$QUERY_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$DESCRIPTION" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$MODULE_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="RDB$ENTRYPOINT" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$RETURN_ARGUMENT" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$SYSTEM_FLAG" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <index name="RDB$INDEX_9" unique="true" columns="RDB$FUNCTION_NAME" />
+    </table>
+    <table name="RDB$FUNCTION_ARGUMENTS" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$FUNCTION_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$ARGUMENT_POSITION" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$MECHANISM" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$FIELD_TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$FIELD_SCALE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$FIELD_LENGTH" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$FIELD_SUB_TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$CHARACTER_SET_ID" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$FIELD_PRECISION" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$CHARACTER_LENGTH" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <index name="RDB$INDEX_10" unique="true" columns="RDB$FUNCTION_NAME" />
+    </table>
+    <table name="RDB$GENERATORS" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$GENERATOR_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$GENERATOR_ID" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$SYSTEM_FLAG" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$DESCRIPTION" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <index name="RDB$INDEX_11" unique="true" columns="RDB$GENERATOR_NAME" />
+      <index name="RDB$INDEX_46" unique="true" columns="RDB$GENERATOR_ID" />
+    </table>
+    <table name="RDB$INDEX_SEGMENTS" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$INDEX_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$FIELD_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$FIELD_POSITION" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$STATISTICS" sqlType="DOUBLE PRECISION" length="15" precision="0" nullable="true" jdbcType="8" />
+      <index name="RDB$INDEX_6" unique="true" columns="RDB$INDEX_NAME" />
+    </table>
+    <table name="RDB$INDICES" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$INDEX_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$RELATION_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$INDEX_ID" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$UNIQUE_FLAG" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$DESCRIPTION" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$SEGMENT_COUNT" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$INDEX_INACTIVE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$INDEX_TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$FOREIGN_KEY" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$SYSTEM_FLAG" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$EXPRESSION_BLR" sqlType="BLOB SUB_TYPE 2" length="0" precision="0" nullable="true" jdbcType="1111" />
+      <column name="RDB$EXPRESSION_SOURCE" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$STATISTICS" sqlType="DOUBLE PRECISION" length="15" precision="0" nullable="true" jdbcType="8" />
+      <index name="RDB$INDEX_31" unique="true" columns="RDB$RELATION_NAME" />
+      <index name="RDB$INDEX_41" unique="true" columns="RDB$FOREIGN_KEY" />
+      <index name="RDB$INDEX_5" unique="true" columns="RDB$INDEX_NAME" />
+    </table>
+    <table name="RDB$LOG_FILES" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$FILE_NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="RDB$FILE_SEQUENCE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$FILE_LENGTH" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="RDB$FILE_PARTITIONS" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$FILE_P_OFFSET" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="RDB$FILE_FLAGS" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+    </table>
+    <table name="RDB$PAGES" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$PAGE_NUMBER" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="RDB$RELATION_ID" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$PAGE_SEQUENCE" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="RDB$PAGE_TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+    </table>
+    <table name="RDB$PROCEDURES" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$PROCEDURE_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$PROCEDURE_ID" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$PROCEDURE_INPUTS" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$PROCEDURE_OUTPUTS" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$DESCRIPTION" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$PROCEDURE_SOURCE" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$PROCEDURE_BLR" sqlType="BLOB SUB_TYPE 2" length="0" precision="0" nullable="true" jdbcType="1111" />
+      <column name="RDB$SECURITY_CLASS" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$OWNER_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$RUNTIME" sqlType="BLOB SUB_TYPE 5" length="0" precision="0" nullable="true" jdbcType="1111" />
+      <column name="RDB$SYSTEM_FLAG" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$PROCEDURE_TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$VALID_BLR" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$DEBUG_INFO" sqlType="BLOB SUB_TYPE 9" length="0" precision="0" nullable="true" jdbcType="1111" />
+      <index name="RDB$INDEX_21" unique="true" columns="RDB$PROCEDURE_NAME" />
+      <index name="RDB$INDEX_22" unique="true" columns="RDB$PROCEDURE_ID" />
+    </table>
+    <table name="RDB$PROCEDURE_PARAMETERS" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$PARAMETER_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$PROCEDURE_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$PARAMETER_NUMBER" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$PARAMETER_TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$FIELD_SOURCE" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$DESCRIPTION" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$SYSTEM_FLAG" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$DEFAULT_VALUE" sqlType="BLOB SUB_TYPE 2" length="0" precision="0" nullable="true" jdbcType="1111" />
+      <column name="RDB$DEFAULT_SOURCE" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$COLLATION_ID" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$NULL_FLAG" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$PARAMETER_MECHANISM" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$FIELD_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$RELATION_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <index name="RDB$INDEX_47" unique="true" columns="RDB$FIELD_SOURCE" />
+      <index name="RDB$INDEX_48" unique="true" columns="RDB$RELATION_NAME,RDB$FIELD_NAME" />
+      <index name="RDB$INDEX_18" unique="true" columns="RDB$PROCEDURE_NAME,RDB$PARAMETER_NAME" />
+    </table>
+    <table name="RDB$REF_CONSTRAINTS" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$CONSTRAINT_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$CONST_NAME_UQ" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$MATCH_OPTION" sqlType="CHAR" length="7" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$UPDATE_RULE" sqlType="CHAR" length="11" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$DELETE_RULE" sqlType="CHAR" length="11" precision="0" nullable="true" jdbcType="1" />
+      <index name="RDB$INDEX_13" unique="true" columns="RDB$CONSTRAINT_NAME" />
+    </table>
+    <table name="RDB$RELATIONS" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$VIEW_BLR" sqlType="BLOB SUB_TYPE 2" length="0" precision="0" nullable="true" jdbcType="1111" />
+      <column name="RDB$VIEW_SOURCE" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$DESCRIPTION" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$RELATION_ID" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$SYSTEM_FLAG" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$DBKEY_LENGTH" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$FORMAT" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$FIELD_ID" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$RELATION_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$SECURITY_CLASS" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$EXTERNAL_FILE" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="RDB$RUNTIME" sqlType="BLOB SUB_TYPE 5" length="0" precision="0" nullable="true" jdbcType="1111" />
+      <column name="RDB$EXTERNAL_DESCRIPTION" sqlType="BLOB SUB_TYPE 8" length="0" precision="0" nullable="true" jdbcType="1111" />
+      <column name="RDB$OWNER_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$DEFAULT_CLASS" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$FLAGS" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$RELATION_TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <index name="RDB$INDEX_1" unique="true" columns="RDB$RELATION_ID" />
+      <index name="RDB$INDEX_0" unique="true" columns="RDB$RELATION_NAME" />
+    </table>
+    <table name="RDB$RELATION_CONSTRAINTS" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$CONSTRAINT_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$CONSTRAINT_TYPE" sqlType="CHAR" length="11" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$RELATION_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$DEFERRABLE" sqlType="CHAR" length="3" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$INITIALLY_DEFERRED" sqlType="CHAR" length="3" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$INDEX_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <index name="RDB$INDEX_42" unique="true" columns="RDB$RELATION_NAME,RDB$CONSTRAINT_TYPE" />
+      <index name="RDB$INDEX_43" unique="true" columns="RDB$INDEX_NAME" />
+      <index name="RDB$INDEX_12" unique="true" columns="RDB$CONSTRAINT_NAME" />
+    </table>
+    <table name="RDB$RELATION_FIELDS" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$FIELD_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$RELATION_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$FIELD_SOURCE" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$QUERY_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$BASE_FIELD" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$EDIT_STRING" sqlType="VARCHAR" length="127" precision="0" nullable="true" jdbcType="12" />
+      <column name="RDB$FIELD_POSITION" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$QUERY_HEADER" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$UPDATE_FLAG" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$FIELD_ID" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$VIEW_CONTEXT" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$DESCRIPTION" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$DEFAULT_VALUE" sqlType="BLOB SUB_TYPE 2" length="0" precision="0" nullable="true" jdbcType="1111" />
+      <column name="RDB$SYSTEM_FLAG" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$SECURITY_CLASS" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$COMPLEX_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$NULL_FLAG" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$DEFAULT_SOURCE" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$COLLATION_ID" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <index name="RDB$INDEX_3" unique="true" columns="RDB$FIELD_SOURCE" />
+      <index name="RDB$INDEX_4" unique="true" columns="RDB$RELATION_NAME" />
+      <index name="RDB$INDEX_15" unique="true" columns="RDB$FIELD_NAME,RDB$RELATION_NAME" />
+    </table>
+    <table name="RDB$ROLES" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$ROLE_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$OWNER_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$DESCRIPTION" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$SYSTEM_FLAG" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <index name="RDB$INDEX_39" unique="true" columns="RDB$ROLE_NAME" />
+    </table>
+    <table name="RDB$SECURITY_CLASSES" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$SECURITY_CLASS" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$ACL" sqlType="BLOB SUB_TYPE 3" length="0" precision="0" nullable="true" jdbcType="1111" />
+      <column name="RDB$DESCRIPTION" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <index name="RDB$INDEX_7" unique="true" columns="RDB$SECURITY_CLASS" />
+    </table>
+    <table name="RDB$TRANSACTIONS" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$TRANSACTION_ID" sqlType="INTEGER" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="RDB$TRANSACTION_STATE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$TIMESTAMP" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93" />
+      <column name="RDB$TRANSACTION_DESCRIPTION" sqlType="BLOB SUB_TYPE 7" length="0" precision="0" nullable="true" jdbcType="1111" />
+      <index name="RDB$INDEX_32" unique="true" columns="RDB$TRANSACTION_ID" />
+    </table>
+    <table name="RDB$TRIGGERS" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$TRIGGER_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$RELATION_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$TRIGGER_SEQUENCE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$TRIGGER_TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$TRIGGER_SOURCE" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$TRIGGER_BLR" sqlType="BLOB SUB_TYPE 2" length="0" precision="0" nullable="true" jdbcType="1111" />
+      <column name="RDB$DESCRIPTION" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$TRIGGER_INACTIVE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$SYSTEM_FLAG" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$FLAGS" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$VALID_BLR" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$DEBUG_INFO" sqlType="BLOB SUB_TYPE 9" length="0" precision="0" nullable="true" jdbcType="1111" />
+      <index name="RDB$INDEX_38" unique="true" columns="RDB$RELATION_NAME" />
+      <index name="RDB$INDEX_8" unique="true" columns="RDB$TRIGGER_NAME" />
+    </table>
+    <table name="RDB$TRIGGER_MESSAGES" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$TRIGGER_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$MESSAGE_NUMBER" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$MESSAGE" sqlType="VARCHAR" length="1023" precision="0" nullable="true" jdbcType="12" />
+      <index name="RDB$INDEX_35" unique="true" columns="RDB$TRIGGER_NAME" />
+    </table>
+    <table name="RDB$TYPES" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$FIELD_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$TYPE_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$DESCRIPTION" sqlType="BLOB SUB_TYPE 1" length="0" precision="0" nullable="true" jdbcType="-1" />
+      <column name="RDB$SYSTEM_FLAG" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <index name="RDB$INDEX_37" unique="true" columns="RDB$TYPE_NAME" />
+    </table>
+    <table name="RDB$USER_PRIVILEGES" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$USER" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$GRANTOR" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$PRIVILEGE" sqlType="CHAR" length="6" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$GRANT_OPTION" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$RELATION_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$FIELD_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$USER_TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$OBJECT_TYPE" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <index name="RDB$INDEX_29" unique="true" columns="RDB$RELATION_NAME" />
+      <index name="RDB$INDEX_30" unique="true" columns="RDB$USER" />
+    </table>
+    <table name="RDB$VIEW_RELATIONS" schema="" catalog="" type="SYSTEM TABLE">
+      <column name="RDB$VIEW_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$RELATION_NAME" sqlType="CHAR" length="31" precision="0" nullable="true" jdbcType="1" />
+      <column name="RDB$VIEW_CONTEXT" sqlType="SMALLINT" length="5" precision="0" nullable="true" jdbcType="5" />
+      <column name="RDB$CONTEXT_NAME" sqlType="CHAR" length="255" precision="0" nullable="true" jdbcType="1" />
+      <index name="RDB$INDEX_33" unique="true" columns="RDB$VIEW_NAME" />
+      <index name="RDB$INDEX_34" unique="true" columns="RDB$RELATION_NAME" />
+    </table>
+    <table name="TEST_TABLE" schema="" catalog="" type="TABLE">
+      <column name="ID" sqlType="INTEGER" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="NAME" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PK_TEST_TABLE" columns="ID" />
+    </table>
+  </data-source>
+</component>
