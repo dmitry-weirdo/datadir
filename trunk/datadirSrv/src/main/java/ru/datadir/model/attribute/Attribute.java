@@ -1,7 +1,11 @@
 package ru.datadir.model.attribute;
 
+import ru.datadir.model.entity.Entity;
 import ru.datadir.model.validation.Validator;
+import su.opencode.kefir.srv.json.Json;
+import su.opencode.kefir.srv.json.JsonObject;
 
+import javax.persistence.Transient;
 import java.util.List;
 
 /**
@@ -13,7 +17,7 @@ import java.util.List;
  * <p/>
  * Атрибут сущности.
  */
-public class Attribute
+public class Attribute extends JsonObject
 {
 	public Long getId() {
 		return id;
@@ -26,6 +30,13 @@ public class Attribute
 	}
 	public void setEntityId(Long entityId) {
 		this.entityId = entityId;
+	}
+	@Json(exclude = true)
+	public Entity getEntity() {
+		return entity;
+	}
+	public void setEntity(Entity entity) {
+		this.entity = entity;
 	}
 	public Integer getDisplayOrder() {
 		return displayOrder;
@@ -69,6 +80,8 @@ public class Attribute
 	public void setComment(String comment) {
 		this.comment = comment;
 	}
+
+	@Transient // todo: use non-transient validators
 	public List<Validator> getValidators() {
 		return validators;
 	}
@@ -85,6 +98,11 @@ public class Attribute
 	 * Код сущности, к которой относится атрибут.
 	 */
 	private Long entityId;
+
+	/**
+	 * Сущность, к которой относится атрибут.
+	 */
+	private Entity entity;
 
 	/**
 	 * Порядок поля среди полей сущности.

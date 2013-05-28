@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
+
+	<persistence-unit name="datadir-JTA" transaction-type="JTA">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>java:/datadirDS</jta-data-source>
+
+		<properties>
+			<!--<property name="hibernate.hbm2ddl.auto" value="update"/>-->
+			<property name="hibernate.show.sql" value="false"/>
+			<property name="hibernate.jdbc.batch_size" value="30"/>
+			<property name="hibernate.default_batch_fetch_size" value="16"/>
+			<property name="hibernate.cache.use_minimal_puts" value="true"/>
+			<property name="hibernate.max_fetch_depth" value="3"/>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.FirebirdDialect"/>
+		</properties>
+	</persistence-unit>
+
+</persistence>
