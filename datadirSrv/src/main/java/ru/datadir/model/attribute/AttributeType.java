@@ -1,5 +1,7 @@
 package ru.datadir.model.attribute;
 
+import su.opencode.kefir.srv.json.JsonObject;
+
 /**
  * Created with IntelliJ IDEA.
  * User: nosferatum
@@ -10,7 +12,7 @@ package ru.datadir.model.attribute;
  * Тип атрибута сущности. Хранится в базе данных.
  * Должен быть замаплен на тип поля базы данных.
  */
-public class AttributeType
+public class AttributeType extends JsonObject
 {
 	public Long getId() {
 		return id;

@@ -27,11 +27,25 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>javaee</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>5</version>
+		</dependency>
+
+		<dependency>
 			<groupId>su.opencode</groupId>
 			<artifactId>kefirUtil</artifactId>
 			<version>1.0</version>
 			<scope>system</scope>
 			<systemPath>${basedir}/lib/kefirUtil.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>su.opencode</groupId>
+			<artifactId>kefirSrv</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/kefirSrv.jar</systemPath>
 		</dependency>
 
 		<dependency>

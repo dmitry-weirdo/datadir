@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" version="1.0">
+	<description>Definition of datadir orm mappings</description>
+	<access>PROPERTY</access>
+
+	<!-- Общие сущности -->
+	<entity class="ru.datadir.model.attribute.AttributeType">
+		<table name="Attribute_type"/>
+		<attributes>
+			<id name="id"/>
+			<basic name="type"><column name="&quot;TYPE&quot;"/> </basic>
+			<basic name="databaseType"><column name="DATABASE_TYPE"/> </basic>
+		</attributes>
+	</entity>
+
+	<entity class="ru.datadir.model.entity.Entity">
+		<table name="Entity"/>
+		<attributes>
+			<id name="id"/>
+			<basic name="packageId"><column name="package_id"/> </basic>
+
+			<one-to-many name="attributes" mapped-by="entity"/>
+		</attributes>
+	</entity>
+
+	<entity class="ru.datadir.model.attribute.Attribute">
+		<table name="Attribute"/>
+		<attributes>
+			<id name="id"/>
+			<basic name="entityId"><column name="entity_id" insertable="false" updatable="false"/> </basic>
+			<basic name="displayOrder"><column name="display_order"/> </basic>
+			<basic name="allowBlank"><column name="allow_blank"/> </basic>
+			<basic name="maxLength"><column name="max_length"/> </basic>
+
+			<many-to-one name="entity"><join-column name="entity_id"/></many-to-one>
+			<many-to-one name="type"><join-column name="attribute_type_id"/></many-to-one>
+		</attributes>
+	</entity>
+
+	<!-- ${APPEND_ENTITY_MAPPING} -->
+</entity-mappings>

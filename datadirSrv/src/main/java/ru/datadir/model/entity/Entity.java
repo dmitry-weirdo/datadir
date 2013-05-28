@@ -1,6 +1,7 @@
 package ru.datadir.model.entity;
 
 import ru.datadir.model.attribute.Attribute;
+import su.opencode.kefir.srv.json.JsonObject;
 
 import java.util.List;
 
@@ -15,7 +16,7 @@ import java.util.List;
  * Метаданные, описывающие сущность.
  * На их основе генерируется таблица базы данных, хранящая экземпляры сущностей.
  */
-public class Entity
+public class Entity extends JsonObject
 {
 	public Long getId() {
 		return id;
