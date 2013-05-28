@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="rpguServiceCatalogWeb" default="deploy" basedir=".">
+	<description>rpguServiceCatalogWeb build file</description>
+
+	<property file="./build.properties"/>
+	<property name="src" location="src/java"/>
+	<property name="web" location="web"/>
+	<property name="lib" location="lib"/>
+	<property name="build" location="build"/>
+	<property name="project.build" location="../build"/>
+	<property name="dist" location="dist"/>
+	<property name="srvDist" location="../datadirSrv/target"/>
+	<!--<property name="srv.lib" location="../rpguServiceCatalogSrv/lib"/>-->
+	<property name="doc" location="doc"/>
+	<property name="build.war" location="build_war"/>
+
+	<property name="compressor.jar.name" value="${lib}/yuicompressor-2.4.7.jar"/>
+	<property name="compressor.css.args" value="-o '.css$:.css'"/>
+	<property name="compressor.js.args" value="-o '.js$:.js'"/>
+	<property name="fake.css.name" value="fake.css"/>
+	<property name="fake.js.name" value="fake.js"/>
+
+	<path id="compile.classpath">
+		<fileset file="${lib}/*.jar"/>
+		<fileset file="${srvDist}/*.jar"/>
+		<!--<fileset file="${srv.lib}/*.jar"/>-->
+	</path>
+
+	<target name="clean" description="clean up">
+		<delete dir="${build}"/>
+		<delete dir="${dist}"/>
+		<delete dir="${doc}"/>
+		<delete dir="${build.war}"/>
+	</target>
+
+	<target name="init" description="init build dirs">
+		<tstamp/>
+		<mkdir dir="${build}"/>
+		<mkdir dir="${dist}"/>
+		<mkdir dir="${doc}"/>
+		<mkdir dir="${build.war}"/>
+	</target>
+
+	<target name="compile" depends="clean, init" description="compile the source">
+		<javac srcdir="${src}" destdir="${build}" debug="true" encoding="windows-1251">
+			<classpath refid="compile.classpath"/>
+		</javac>
+	</target>
+
+	<target name="copy_war">
+		<copydir src="${web}" dest="${build.war}"/> <!-- todo: use copy task, copydir is deprecated .-->
+	</target>
+
+	<target name="minify" depends="copy_war">
+		<touch file="${build.war}/css/${fake.css.name}"/> <!-- delete additional file -->
+		<java jar="${compressor.jar.name}" fork="true">
+			<!--<arg line="-o '.css$:-min.css' ${build.war}/css/*.css"/>-->
+			<arg line="${compressor.css.args} ${build.war}/css/*.css"/>
+		</java>
+		<delete file="${build.war}/css/${fake.css.name}"/> <!-- delete additional file -->
+
+
+		<java jar="${compressor.jar.name}" fork="true">
+			<arg line="${compressor.js.args} ${build.war}/js/*.js"/>
+		</java>
+
+	</target>
+
+	<target name="dist" depends="compile, copy_war" description="generate the distribution">
+		<war warfile="${dist}/${datadir.war.name}" basedir="${build.war}" webxml="${build.war}/WEB-INF/web.xml">
+			<classes dir="${build}"/>
+			<!--<lib dir="${lib}"/>-->
+		</war>
+		<copy file="${dist}/${datadir.war.name}" todir="${project.build}"/>
+	</target>
+
+	<target name="dist-minified" depends="compile, minify" description="generate the distribution with minified css and js">
+		<war warfile="${dist}/${datadir.war.name}" basedir="${build.war}" webxml="${build.war}/WEB-INF/web.xml">
+			<classes dir="${build}"/>
+		</war>
+		<copy file="${dist}/${datadir.war.name}" todir="${project.build}"/>
+	</target>
+
+	<target name="deploy" depends="dist" description="deploy on server">
+		<copy file="${dist}/${datadir.war.name}" todir="${deploy.path}"/>
+	</target>
+
+	<target name="deploy-minified" depends="dist-minified" description="deploy on server">
+		<copy file="${dist}/${datadir.war.name}" todir="${deploy.path}"/>
+	</target>
+
+	<target name="javadoc" depends="compile" description="generate javadoc">
+		<javadoc sourcepath="${src}" destdir="${doc}" classpath="${build}" classpathref="compile.classpath" package="su.opencode.minstroy" access="private"/>
+	</target>
+</project>
