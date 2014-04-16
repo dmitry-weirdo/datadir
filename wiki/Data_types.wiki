@@ -2,7 +2,7 @@
 || строка || String || varchar || varchar ||
 || целое число || Long || int64 || bigint ||
 || вещественное число || Double || double || real ||
-|| булев тип (истина/ложь) || smallint || || tinyint ||
+|| булев тип (истина/ложь) || Boolean || smallint || || tinyint ||
 || символ || Character || char || char ||
 || файл || byte[] + метаданные || ссылка на объект Attachment || ссылка на объект Attachment ||
 || набор байт неограниченного размера (или строка неограниченной длины) || byte[] || lob ||
