@@ -4,8 +4,8 @@
 || вещественное число || Double || double || real ||
 || булев тип (истина/ложь) || Boolean || smallint || tinyint ||
 || символ || Character || char || char ||
-|| файл || byte<nowiki>[]</nowiki> + метаданные || ссылка на объект Attachment || ссылка на объект Attachment ||
-|| набор байт неограниченного размера (или строка неограниченной длины) || byte[] || lob ||
+|| файл || byte*[*] + метаданные || ссылка на объект Attachment || ссылка на объект Attachment ||
+|| набор байт неограниченного размера (или строка неограниченной длины) || byte*[*] || lob ||
 || дата || Date || timestamp ||  date ||
 || дата и время || Date || timestamp || datetime ||
 || пересчислимый тип/справочник/ссылка на другую сущность || enum/Object || foreign key || foreign key ||
