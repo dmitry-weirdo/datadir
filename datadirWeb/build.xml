@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="rpguServiceCatalogWeb" default="deploy" basedir=".">
-	<description>rpguServiceCatalogWeb build file</description>
+<project name="datadirWeb" default="deploy" basedir=".">
+	<description>datadirWeb build file</description>
 
 	<property file="./build.properties"/>
 	<property name="src" location="src/java"/>
@@ -67,7 +67,7 @@
 	</target>
 
 	<target name="dist" depends="compile, copy_war" description="generate the distribution">
-		<war warfile="${dist}/${datadir.war.name}" basedir="${build.war}" webxml="${build.war}/WEB-INF/web.xml">
+		<war warfile="${dist}/${datadir.war.name}" basedir="${build.war}" webxml="${build.war}/WEB-INF/web.xml" manifest="${build.war}/WEB-INF/MANIFEST.MF">
 			<classes dir="${build}"/>
 			<!--<lib dir="${lib}"/>-->
 		</war>
