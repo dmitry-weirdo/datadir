@@ -8,7 +8,7 @@
 		<table name="Attribute_type"/>
 		<attributes>
 			<id name="id"/>
-			<basic name="type"><column name="&quot;TYPE&quot;"/> </basic>
+			<basic name="javaType"><column name="&quot;TYPE&quot;"/> </basic>
 			<basic name="databaseType"><column name="DATABASE_TYPE"/> </basic>
 		</attributes>
 	</entity>

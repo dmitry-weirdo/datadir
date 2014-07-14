@@ -1,12 +1,15 @@
 package ru.datadir.model.attribute;
 
 import ru.datadir.model.entity.Entity;
+import su.opencode.kefir.util.ObjectUtils;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
+
+import static su.opencode.kefir.util.StringUtils.concat;
 
 /**
  * Created with IntelliJ IDEA.
@@ -26,6 +29,25 @@ public class AttributeTypeServiceBean implements AttributeTypeService
 	}
 
 	@Override
+	@SuppressWarnings("unchecked")
+	public AttributeType getAttributeType(AttributeTypeMnemonic mnemonic) {
+		if (mnemonic == null)
+			return null;
+
+		Query query = em.createQuery("select at from AttributeType at where at.mnemonic = :mnemonic")
+			.setParameter("mnemonic", mnemonic);
+
+		List<AttributeType> resultList = query.getResultList();
+		if ( ObjectUtils.empty(resultList) )
+			return null;
+
+		if (resultList.size() > 1)
+			throw new IllegalStateException( concat(sb, "More than one Attribute type for mnemonic \"", mnemonic, "\"") );
+
+		return resultList.get(0);
+	}
+
+	@Override
 	public Entity getEntity(Long id) {
 		if (id == null)
 			return null;
@@ -40,4 +62,6 @@ public class AttributeTypeServiceBean implements AttributeTypeService
 
 	@PersistenceContext
 	private EntityManager em;
+
+	private StringBuffer sb = new StringBuffer();
 }

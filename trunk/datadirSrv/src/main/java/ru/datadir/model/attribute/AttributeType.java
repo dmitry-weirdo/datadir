@@ -14,17 +14,29 @@ import su.opencode.kefir.srv.json.JsonObject;
  */
 public class AttributeType extends JsonObject
 {
+	public AttributeType() {
+	}
+	public AttributeType(AttributeTypeMnemonic mnemonic) {
+		this.mnemonic = mnemonic;
+	}
+
 	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getType() {
-		return type;
+	public AttributeTypeMnemonic getMnemonic() {
+		return mnemonic;
 	}
-	public void setType(String type) {
-		this.type = type;
+	public void setMnemonic(AttributeTypeMnemonic mnemonic) {
+		this.mnemonic = mnemonic;
+	}
+	public String getJavaType() {
+		return javaType;
+	}
+	public void setJavaType(String javaType) {
+		this.javaType = javaType;
 	}
 	public String getDatabaseType() {
 		return databaseType;
@@ -45,9 +57,14 @@ public class AttributeType extends JsonObject
 	private Long id;
 
 	/**
-	 * Тип. Например, String.
+	 * Мнемоника.
 	 */
-	private String type;
+	private AttributeTypeMnemonic mnemonic;
+
+	/**
+	 * Java-тип. Например, String.
+	 */
+	private String javaType;
 
 	/**
 	 * Тип в базе данных. Например, varchar.
