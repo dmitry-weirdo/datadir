@@ -58,5 +58,5 @@ public class User
 	 */
 	private String name;
 
-	// todo: другие параметры (например, displayName, nickname etc.)
+	// todo: другие параметры (например, role, displayName, nickname etc.)
 }

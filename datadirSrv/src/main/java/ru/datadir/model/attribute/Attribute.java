@@ -19,6 +19,13 @@ import java.util.List;
  */
 public class Attribute extends JsonObject
 {
+	public Attribute() {
+	}
+	public Attribute(String name, AttributeType type) {
+		this.type = type;
+		this.name = name;
+	}
+
 	public Long getId() {
 		return id;
 	}

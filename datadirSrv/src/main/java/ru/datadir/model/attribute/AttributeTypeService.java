@@ -17,5 +17,7 @@ public interface AttributeTypeService
 {
 	List<AttributeType> getAttributeTypes();
 
+	AttributeType getAttributeType(AttributeTypeMnemonic mnemonic);
+
 	Entity getEntity(Long id);
 }

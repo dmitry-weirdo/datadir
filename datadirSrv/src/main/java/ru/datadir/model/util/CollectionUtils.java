@@ -13,10 +13,6 @@ import java.util.List;
  */
 public class CollectionUtils
 {
-	public static boolean isEmpty(Collection collection) {
-		return collection == null || collection.isEmpty();
-	}
-
 	public static <T> List<T> getOneElementList(T value) {
 		List<T> result = new ArrayList<>();
 		result.add(value);
