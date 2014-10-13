@@ -8,16 +8,28 @@ alter table Attribute_type add constraint pk_attribute_type primary key(id);
 create sequence gen_attribute_type_id;
 alter sequence gen_attribute_type_id restart with 0;
 
+create table Section (
+	  id                 bigint not null primary key
+	, parent_section_id  bigint
+	, name               varchar(255) not null
+	, comment            varchar(255)
+
+	, foreign key(parent_section_id) references Section(id)
+);
+create sequence section_gen;
+alter sequence section_gen restart with 0;
+
 create table Entity (
-	  id          bigint not null
-	, package_id  bigint
+	  id          bigint not null primary key
+	, section_id  bigint not null
 	, name        varchar(255)
 	, label       varchar(255)
 	, comment     varchar(255)
+
+	, foreign key(section_id) references Section(id)
 );
-alter table Entity add constraint pk_entity primary key(id);
-create sequence gen_entity_id;
-alter sequence gen_entity_id restart with 0;
+create sequence entity_gen;
+alter sequence entity_gen restart with 0;
 
 create table Attribute (
 	  id                 bigint not null
