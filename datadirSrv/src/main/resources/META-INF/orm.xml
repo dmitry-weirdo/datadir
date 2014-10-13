@@ -13,12 +13,21 @@
 		</attributes>
 	</entity>
 
+	<entity class="ru.datadir.model.section.Section">
+		<table name="Section"/>
+		<attributes>
+			<id name="id"/>
+
+			<many-to-one name="parent"><join-column name="parent_section_id"/></many-to-one>
+		</attributes>
+	</entity>
+
 	<entity class="ru.datadir.model.entity.Entity">
 		<table name="Entity"/>
 		<attributes>
 			<id name="id"/>
-			<basic name="packageId"><column name="package_id"/></basic>
 
+			<many-to-one name="section"><join-column name="section_id"/></many-to-one>
 			<one-to-many name="attributes" mapped-by="entity"/>
 		</attributes>
 	</entity>

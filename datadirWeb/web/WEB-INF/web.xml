@@ -41,6 +41,14 @@
 		<url-pattern>/attributeTypesList</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>sectionsList</servlet-name>
+		<servlet-class>ru.datadir.section.SectionsListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>sectionsList</servlet-name>
+		<url-pattern>/sectionsList</url-pattern>
+	</servlet-mapping>
 
 	<servlet>
 		<servlet-name>entityGet</servlet-name>

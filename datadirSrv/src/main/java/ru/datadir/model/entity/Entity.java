@@ -1,6 +1,7 @@
 package ru.datadir.model.entity;
 
 import ru.datadir.model.attribute.Attribute;
+import ru.datadir.model.section.Section;
 import su.opencode.kefir.srv.json.JsonObject;
 
 import javax.persistence.Transient;
@@ -25,11 +26,11 @@ public class Entity extends JsonObject
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public Long getPackageId() {
-		return packageId;
+	public Section getSection() {
+		return section;
 	}
-	public void setPackageId(Long packageId) {
-		this.packageId = packageId;
+	public void setSection(Section section) {
+		this.section = section;
 	}
 	public String getName() {
 		return name;
@@ -76,9 +77,9 @@ public class Entity extends JsonObject
 	private Long id;
 
 	/**
-	 * Идентификатор пакета, к которому относится сущность.
+	 * Раздел (пакет), к&nbsp;которому относится сущность.
 	 */
-	private Long packageId;
+	private Section section;
 
 	/**
 	 * Имя сущности. Валидный идентификатор для названия таблицы базы данных.

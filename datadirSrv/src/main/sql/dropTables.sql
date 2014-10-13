@@ -8,7 +8,10 @@ drop table Attribute;
 drop sequence gen_attribute_id;
 
 drop table Entity;
-drop sequence gen_entity_id;
+drop sequence entity_gen;
+
+drop table Section;
+drop sequence section_gen;
 
 drop table Attribute_type;
 drop sequence gen_attribute_type_id;
