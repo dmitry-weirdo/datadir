@@ -36,4 +36,25 @@ alter table Attribute add constraint fk_attribute_2 foreign key(attribute_type_i
 create sequence gen_attribute_id;
 alter sequence gen_attribute_id restart with 0;
 
+create table "User" (
+	  id        bigint not null primary key
+	, login     varchar(255) not null
+	, password  varchar(255) not null
+	, name      varchar(255) not null
+);
+create sequence user_gen;
+alter sequence user_gen restart with 0;
+
+create table User_entity_operation (
+	  id        bigint not null primary key
+	, user_id   bigint not null
+	, entity_id bigint not null
+	, operation varchar(20) not null
+
+	, foreign key(user_id) references "User"(id)
+	, foreign key(entity_id) references Entity(id)
+);
+create sequence user_entity_operation_gen;
+alter sequence user_entity_operation_gen restart with 0;
+
 commit;

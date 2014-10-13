@@ -24,15 +24,7 @@ public class FirebirdDatabaseTableCreator implements DatabaseTableCreator
 		StringBuilder sb = new StringBuilder();
 		DatabaseTypeMapper typeMapper = new FirebirdDatabaseTypeMapper();
 
-		List<Attribute> attributes = entity.getAttributes();
-		int maxAttributeNameLength = -1;
-		for (Attribute attribute : attributes)
-		{
-			int length = attribute.getName().length();
-			if (length > maxAttributeNameLength)
-				maxAttributeNameLength = length;
-		}
-
+		int maxAttributeNameLength = entity.getMaxAttributeNameLength();
 		int lengthBeforeFieldType = maxAttributeNameLength + 2;
 
 		String tableName = DatabaseEntityUtils.getDatabaseTableName(entity);
@@ -52,6 +44,7 @@ public class FirebirdDatabaseTableCreator implements DatabaseTableCreator
 		sb.append("bigint not null primary key");
 
 		// append fields
+		List<Attribute> attributes = entity.getAttributes();
 		for (int i = 0; i < attributes.size(); i++)
 		{
 			Attribute attribute = attributes.get(i);

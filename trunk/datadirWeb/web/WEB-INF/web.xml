@@ -10,6 +10,13 @@
 		<param-name>su.opencode.kefir.web.util.ServiceFactory.MODE</param-name>
 		<param-value>local</param-value>
 	</context-param>
+<!--
+	<context-param>
+		<description>Режим работы фабрики сервисов.</description>
+		<param-name>su.opencode.kefir.web.util.ServiceFactory.EAR_NAME</param-name>
+		<param-value>java:global/datadir-0.1</param-value>
+	</context-param>
+-->
 
 	<filter>
 		<filter-name>charsetFilter</filter-name>
@@ -29,20 +36,37 @@
 		<servlet-name>attributeTypesList</servlet-name>
 		<servlet-class>ru.datadir.attribute.AttributeTypesListServlet</servlet-class>
 	</servlet>
-
-	<servlet>
-		<servlet-name>entityGet</servlet-name>
-		<servlet-class>ru.datadir.entity.EntityGetServlet</servlet-class>
-	</servlet>
-
 	<servlet-mapping>
 		<servlet-name>attributeTypesList</servlet-name>
 		<url-pattern>/attributeTypesList</url-pattern>
 	</servlet-mapping>
 
+
+	<servlet>
+		<servlet-name>entityGet</servlet-name>
+		<servlet-class>ru.datadir.entity.EntityGetServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>entityGet</servlet-name>
 		<url-pattern>/entityGet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>createTable</servlet-name>
+		<servlet-class>ru.datadir.entity.CreateTableServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>createTable</servlet-name>
+		<url-pattern>/createTable</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>userRightsCheck</servlet-name>
+		<servlet-class>ru.datadir.user.UserRightsCheckServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>userRightsCheck</servlet-name>
+		<url-pattern>/userRightsCheck</url-pattern>
 	</servlet-mapping>
 
 </web-app>

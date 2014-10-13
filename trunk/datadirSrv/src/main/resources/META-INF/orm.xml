@@ -8,8 +8,8 @@
 		<table name="Attribute_type"/>
 		<attributes>
 			<id name="id"/>
-			<basic name="javaType"><column name="&quot;TYPE&quot;"/> </basic>
-			<basic name="databaseType"><column name="DATABASE_TYPE"/> </basic>
+			<basic name="javaType"><column name="&quot;TYPE&quot;"/></basic>
+			<basic name="databaseType"><column name="DATABASE_TYPE"/></basic>
 		</attributes>
 	</entity>
 
@@ -17,7 +17,7 @@
 		<table name="Entity"/>
 		<attributes>
 			<id name="id"/>
-			<basic name="packageId"><column name="package_id"/> </basic>
+			<basic name="packageId"><column name="package_id"/></basic>
 
 			<one-to-many name="attributes" mapped-by="entity"/>
 		</attributes>
@@ -28,12 +28,31 @@
 		<attributes>
 			<id name="id"/>
 			<basic name="entityId"><column name="entity_id" insertable="false" updatable="false"/> </basic>
-			<basic name="displayOrder"><column name="display_order"/> </basic>
-			<basic name="allowBlank"><column name="allow_blank"/> </basic>
-			<basic name="maxLength"><column name="max_length"/> </basic>
+			<basic name="displayOrder"><column name="display_order"/></basic>
+			<basic name="allowBlank"><column name="allow_blank"/></basic>
+			<basic name="maxLength"><column name="max_length"/></basic>
 
 			<many-to-one name="entity"><join-column name="entity_id"/></many-to-one>
 			<many-to-one name="type"><join-column name="attribute_type_id"/></many-to-one>
+		</attributes>
+	</entity>
+
+
+	<entity class="ru.datadir.model.user.User">
+		<table name="&quot;User&quot;"/>
+		<attributes>
+			<id name="id"/>
+		</attributes>
+	</entity>
+
+	<entity class="ru.datadir.model.user.UserEntityOperation">
+		<table name="User_entity_operation"/>
+		<attributes>
+			<id name="id"/>
+			<basic name="operation"><enumerated>STRING</enumerated></basic>
+
+			<many-to-one name="user"><join-column name="user_id"/></many-to-one>
+			<many-to-one name="entity"><join-column name="entity_id"/></many-to-one>
 		</attributes>
 	</entity>
 
