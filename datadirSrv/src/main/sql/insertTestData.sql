@@ -66,4 +66,20 @@ values(
 , ( select att.id from Attribute_type att where att."type" = 'java.lang.String')
 );
 
+insert into "User"(id, login, password, name)
+values(
+  gen_id(user_gen, 0)
+, 'testUserLogin'
+, 'testUserPassword'
+, 'Test User Name'
+);
+
+insert into User_entity_operation(id, user_id, entity_id, operation)
+values(
+  gen_id(user_entity_operation_gen, 0)
+, ( select u.id from "User" u where u.login = 'testUserLogin')
+, ( select e.id from Entity e where e.name = 'Car')
+, 'create'
+);
+
 commit;

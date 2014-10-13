@@ -16,6 +16,12 @@ import ru.datadir.model.entity.Entity;
  */
 public class UserEntityOperation
 {
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 	public User getUser() {
 		return user;
 	}
@@ -34,6 +40,11 @@ public class UserEntityOperation
 	public void setOperation(Operation operation) {
 		this.operation = operation;
 	}
+
+	/**
+	 * Идентификатор.
+	 */
+	private Long id;
 
 	/**
 	 * Пользователь.

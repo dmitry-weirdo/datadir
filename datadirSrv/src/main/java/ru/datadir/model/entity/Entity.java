@@ -3,6 +3,7 @@ package ru.datadir.model.entity;
 import ru.datadir.model.attribute.Attribute;
 import su.opencode.kefir.srv.json.JsonObject;
 
+import javax.persistence.Transient;
 import java.util.List;
 
 /**
@@ -54,6 +55,20 @@ public class Entity extends JsonObject
 	public void setAttributes(List<Attribute> attributes) {
 		this.attributes = attributes;
 	}
+
+	@Transient
+	public int getMaxAttributeNameLength() {
+		int maxAttributeNameLength = -1;
+		for (Attribute attribute : attributes)
+		{
+			int length = attribute.getName().length();
+			if (length > maxAttributeNameLength)
+				maxAttributeNameLength = length;
+		}
+
+		return maxAttributeNameLength;
+	}
+
 
 	/**
 	 * Идентификатор.
