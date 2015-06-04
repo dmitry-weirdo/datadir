@@ -30,9 +30,11 @@ function createEntityTable(config) {
 		headerRow.appendChild(attributeHeaderCell);
 	}
 
+	var readHeader = dh.createEl(dh.TH_TAG, null, null, 'Просмотреть');
 	var updateHeader = dh.createEl(dh.TH_TAG, null, null, 'Изменить');
 	var deleteHeader = dh.createEl(dh.TH_TAG, null, null, 'Удалить');
 
+	headerRow.appendChild(readHeader);
 	headerRow.appendChild(updateHeader);
 	headerRow.appendChild(deleteHeader);
 
@@ -64,6 +66,14 @@ function createEntityTable(config) {
 			recordRow.appendChild(valueCell);
 		}
 
+		var readCell = dh.createEl(dh.TD_TAG);
+		var readLink = dh.createEl(dh.A_TAG, null, null, 'Просмотреть');
+		//readLink.setAttribute(dh.HREF_ATTRIBUTE, '/read?entityId=' + metadata.id + '&recordId=' + record.id);
+		readLink.setAttribute(dh.HREF_ATTRIBUTE, '#');
+		readLink.onclick = getReadLinkHandler(config, record);
+
+		readCell.appendChild(readLink);
+
 		var updateCell = dh.createEl(dh.TD_TAG);
 		var updateLink = dh.createEl(dh.A_TAG, null, null, 'Изменить');
 		updateLink.setAttribute(dh.HREF_ATTRIBUTE, '/update?entityId=' + metadata.id + '&recordId=' + record.id);
@@ -74,6 +84,7 @@ function createEntityTable(config) {
 		deleteLink.setAttribute(dh.HREF_ATTRIBUTE, '/delete?entityId=' + metadata.id + '&recordId=' + record.id);
 		deleteCell.appendChild(deleteLink);
 
+		recordRow.appendChild(readCell);
 		recordRow.appendChild(updateCell);
 		recordRow.appendChild(deleteCell);
 
@@ -94,10 +105,17 @@ function createEntityTable(config) {
 
 	var createCell = dh.createEl(dh.TD_TAG);
 	var createLink = dh.createEl(dh.A_TAG, null, null, 'Создать');
-	createLink.setAttribute(dh.HREF_ATTRIBUTE, '/create?entityId=' + metadata.id);
+	//createLink.setAttribute(dh.HREF_ATTRIBUTE, '/create?entityId=' + metadata.id);
+	createLink.setAttribute(dh.HREF_ATTRIBUTE, '#' + metadata.id);
+	createLink.onclick = function() {
+		clearCreateFormFields(config);
+		showCreateForm(config);
+	};
+
 	createCell.appendChild(createLink);
 
 	var rightCreateCell = dh.createEl(dh.TD_TAG, null, null, NBSP_CODE);
+	rightCreateCell.setAttribute(dh.COL_SPAN_ATTRIBUTE, 2);
 
 	createRow.appendChild(leftCreateCell);
 	createRow.appendChild(createCell);
@@ -110,4 +128,11 @@ function createEntityTable(config) {
 	var container = document.getElementById(config.containerId);
 	container.appendChild(header);
 	container.appendChild(table);
+}
+
+function getReadLinkHandler(config, record) {
+	return function() {
+		fillReadForm(config, record);
+		showReadForm(config);
+	}
 }
