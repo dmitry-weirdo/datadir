@@ -5,6 +5,7 @@
 	<title>Pure js table test</title>
 	<script type="text/javascript" charset="utf-8" src="./js/ru.datadir.DomHelper.js"></script>
 	<script type="text/javascript" charset="utf-8" src="./js/pureJsTable.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/pureJsCrudForm.js"></script>
 
 	<style type="text/css">
 		body {
@@ -44,20 +45,45 @@
 			background-color: #EAF2D3;
 		}
 
+		/* todo: move to common js */
+		.dn {
+			display: none;
+		}
+		.db {
+			display: block;
+		}
+
+		.alignRight {
+			text-align: right;
+		}
+
 
 	</style>
 </head>
 <body>
 <div id="table-container"></div>
+<div id="create-form-container" style="display: none;"></div>
+<div id="read-form-container" style="display: none;"></div>
+<div id="update-form-container" style="display: none;"></div>
+<div id="delete-form-container" style="display: none;"></div>
 
 <script type="text/javascript">
 	var CONTAINER_ID = 'table-container';
+	var CREATE_FORM_CONTAINER_ID = 'create-form-container';
+	var READ_FORM_CONTAINER_ID = 'read-form-container';
+	var UPDATE_FORM_CONTAINER_ID = 'update-form-container';
+	var DELETE_FORM_CONTAINER_ID = 'delete-form-container';
 
 	var metadata = {
 		  id: 1
 		, name: 'Car'
 		, label: 'Машина'
 		, comment: 'Тестовая таблица'
+
+		, createLabel: 'Создать машину'
+		, readLabel: 'Просмотр машины' // todo: or viewLabel
+		, updateLabel: 'Изменить машину'
+		, deleteLabel: 'Удалить машину'
 
 		, attributes: [
 			  { id: 1, displayOrder: 1, name: 'brand', label: 'Марка', type: 'string' }
@@ -75,13 +101,23 @@
 		, { id: 13, brand: 'ВАЗ-2101', power: 40, doorsCount: 5, color: 'металлик ржавый такой' }
 	];
 
-	createEntityTable({
+	var crudConfig = {
 		  containerId: CONTAINER_ID
 		, metadata: metadata
 		, data: data
 		, oddTrClass: 'odd'
 		, evenTrClass: 'even'
-	});
+
+		, createFormContainerId: CREATE_FORM_CONTAINER_ID
+		, readFormContainerId: READ_FORM_CONTAINER_ID
+		, updateFormContainerId: UPDATE_FORM_CONTAINER_ID
+		, deleteFormContainerId: DELETE_FORM_CONTAINER_ID
+	};
+
+	createEntityTable(crudConfig);
+
+	createCreateForm(crudConfig);
+	createReadForm(crudConfig);
 </script>
 
 </body>

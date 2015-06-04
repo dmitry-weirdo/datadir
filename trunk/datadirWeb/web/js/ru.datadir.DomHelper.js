@@ -18,6 +18,8 @@ var DomHelper = function() {
 		SPAN_TAG: 'span',
 		A_TAG: 'a',
 
+		FORM_TAG: 'form',
+
 		INPUT_TAG: 'input',
 		LABEL_TAG: 'label',
 
@@ -198,6 +200,13 @@ var DomHelper = function() {
 				return '';
 
 			return str.replace('&nbsp;', ' ');
+		},
+
+		showElement: function(elementId) {
+			DomHelper.getEl(elementId).style.display = 'block';
+		},
+		hideElement: function(elementId) {
+			DomHelper.getEl(elementId).style.display = 'none';
 		}
 	}
 }();
